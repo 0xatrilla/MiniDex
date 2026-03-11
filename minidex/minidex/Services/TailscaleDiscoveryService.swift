@@ -93,58 +93,12 @@ final class TailscaleDiscoveryService {
 }
 
 private extension TailscaleDiscoveryService {
-    struct StatusResponse: Decodable {
-        let peers: [String: Peer]
-
-        private enum CodingKeys: String, CodingKey {
-            case peers = "Peer"
-            case peersLower = "peer"
-        }
-
-        init(from decoder: Decoder) throws {
-            let container = try decoder.container(keyedBy: CodingKeys.self)
-            self.peers = try container.decodeIfPresent([String: Peer].self, forKey: .peers)
-                ?? container.decodeIfPresent([String: Peer].self, forKey: .peersLower)
-                ?? [:]
-        }
-    }
-
-    struct Peer: Decodable {
+    struct Peer {
         let hostName: String?
         let dnsName: String?
         let os: String?
         let online: Bool?
         let tailscaleIPs: [String]
-
-        private enum CodingKeys: String, CodingKey {
-            case hostName
-            case hostNameUpper = "HostName"
-            case dnsName
-            case dnsNameUpper = "DNSName"
-            case os
-            case osUpper = "OS"
-            case online
-            case onlineUpper = "Online"
-            case tailscaleIPs
-            case tailscaleIPsUpper = "TailscaleIPs"
-            case tailscaleIPsSnake = "tailscale_ips"
-        }
-
-        init(from decoder: Decoder) throws {
-            let container = try decoder.container(keyedBy: CodingKeys.self)
-            self.hostName = try container.decodeIfPresent(String.self, forKey: .hostName)
-                ?? container.decodeIfPresent(String.self, forKey: .hostNameUpper)
-            self.dnsName = try container.decodeIfPresent(String.self, forKey: .dnsName)
-                ?? container.decodeIfPresent(String.self, forKey: .dnsNameUpper)
-            self.os = try container.decodeIfPresent(String.self, forKey: .os)
-                ?? container.decodeIfPresent(String.self, forKey: .osUpper)
-            self.online = try container.decodeIfPresent(Bool.self, forKey: .online)
-                ?? container.decodeIfPresent(Bool.self, forKey: .onlineUpper)
-            self.tailscaleIPs = try container.decodeIfPresent([String].self, forKey: .tailscaleIPs)
-                ?? container.decodeIfPresent([String].self, forKey: .tailscaleIPsUpper)
-                ?? container.decodeIfPresent([String].self, forKey: .tailscaleIPsSnake)
-                ?? []
-        }
 
         var isReachable: Bool {
             online ?? true
@@ -185,8 +139,7 @@ private extension TailscaleDiscoveryService {
                 throw TailscaleDiscoveryError.localAPIUnavailable
             }
 
-            let status = try decoder.decode(StatusResponse.self, from: data)
-            let peers = status.peers.values.filter { $0.isReachable && $0.isLikelyMac }
+            let peers = try parsePeers(from: data).filter { $0.isReachable && $0.isLikelyMac }
             guard !peers.isEmpty else {
                 throw TailscaleDiscoveryError.noReachableCodexServer
             }
@@ -205,6 +158,108 @@ private extension TailscaleDiscoveryService {
 
             throw TailscaleDiscoveryError.invalidStatusResponse
         }
+    }
+
+    func parsePeers(from data: Data) throws -> [Peer] {
+        guard let rootObject = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
+            throw TailscaleDiscoveryError.invalidStatusResponse
+        }
+
+        guard let rawPeers = rootObject["Peer"] as? [String: Any]
+                ?? rootObject["peer"] as? [String: Any] else {
+            throw TailscaleDiscoveryError.invalidStatusResponse
+        }
+
+        return rawPeers.values.compactMap(parsePeer(from:))
+    }
+
+    func parsePeer(from rawValue: Any) -> Peer? {
+        guard let dictionary = rawValue as? [String: Any] else {
+            return nil
+        }
+
+        let hostInfo = dictionary["Hostinfo"] as? [String: Any]
+            ?? dictionary["hostinfo"] as? [String: Any]
+
+        let hostName = firstString(in: dictionary, keys: ["HostName", "hostName"])
+            ?? firstString(in: hostInfo, keys: ["Hostname", "hostname", "HostName", "hostName"])
+        let dnsName = firstString(in: dictionary, keys: ["DNSName", "dnsName"])
+        let os = firstString(in: dictionary, keys: ["OS", "os"])
+            ?? firstString(in: hostInfo, keys: ["OS", "os"])
+        let online = firstBool(in: dictionary, keys: ["Online", "online"])
+        let tailscaleIPs = firstStringArray(
+            in: dictionary,
+            keys: ["TailscaleIPs", "tailscaleIPs", "tailscale_ips"]
+        )
+
+        return Peer(
+            hostName: hostName,
+            dnsName: dnsName,
+            os: os,
+            online: online,
+            tailscaleIPs: tailscaleIPs
+        )
+    }
+
+    func firstString(in dictionary: [String: Any]?, keys: [String]) -> String? {
+        guard let dictionary else { return nil }
+
+        for key in keys {
+            if let value = dictionary[key] as? String {
+                let trimmedValue = value.trimmingCharacters(in: .whitespacesAndNewlines)
+                if !trimmedValue.isEmpty {
+                    return trimmedValue
+                }
+            }
+        }
+
+        return nil
+    }
+
+    func firstBool(in dictionary: [String: Any], keys: [String]) -> Bool? {
+        for key in keys {
+            if let value = dictionary[key] as? Bool {
+                return value
+            }
+
+            if let value = dictionary[key] as? NSNumber {
+                return value.boolValue
+            }
+
+            if let value = dictionary[key] as? String {
+                switch value.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() {
+                case "true", "1", "yes":
+                    return true
+                case "false", "0", "no":
+                    return false
+                default:
+                    continue
+                }
+            }
+        }
+
+        return nil
+    }
+
+    func firstStringArray(in dictionary: [String: Any], keys: [String]) -> [String] {
+        for key in keys {
+            guard let values = dictionary[key] as? [Any] else { continue }
+
+            let strings = values.compactMap { value -> String? in
+                guard let stringValue = value as? String else {
+                    return nil
+                }
+
+                let trimmedValue = stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
+                return trimmedValue.isEmpty ? nil : trimmedValue
+            }
+
+            if !strings.isEmpty {
+                return strings
+            }
+        }
+
+        return []
     }
 
     func candidateURLs(

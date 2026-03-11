@@ -111,7 +111,7 @@ final class ContentViewModel {
             try await connectWithAutoRecovery(
                 codex: codex,
                 serverURL: serverURL,
-                performAutoRetry: true
+                performAutoRetry: false
             )
         } catch {
             // Keep the saved server URL so temporary network outages can recover on the next retry.

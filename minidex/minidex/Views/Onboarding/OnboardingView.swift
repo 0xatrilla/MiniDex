@@ -9,6 +9,8 @@ import SwiftUI
 struct OnboardingView: View {
     let onContinue: () -> Void
     @State private var selectedRoute: OnboardingPairingRoute = .tailscale
+    @State private var isAutoContinuing = true
+    @State private var hasTriggeredContinue = false
 
     var body: some View {
         ZStack {
@@ -57,6 +59,19 @@ struct OnboardingView: View {
                                 .foregroundStyle(CodexBrand.accentMuted)
                                 .textCase(.uppercase)
 
+                            if isAutoContinuing {
+                                HStack(spacing: 10) {
+                                    ProgressView()
+                                        .controlSize(.small)
+                                    Text("Starting connection setup automatically...")
+                                        .font(AppFont.caption(weight: .medium))
+                                        .foregroundStyle(CodexBrand.ink.opacity(0.82))
+                                }
+                                .padding(.horizontal, 14)
+                                .padding(.vertical, 10)
+                                .background(CodexBrand.cardSurface, in: Capsule())
+                            }
+
                             OnboardingRoutePicker(selection: $selectedRoute)
 
                             VStack(spacing: 14) {
@@ -71,11 +86,16 @@ struct OnboardingView: View {
                             }
                         }
 
-                        Button(action: onContinue) {
+                        Button(action: continueToSetup) {
                             HStack(spacing: 10) {
-                                Image(systemName: "network")
-                                    .font(.system(size: 16, weight: .semibold))
-                                Text("Open Connection Setup")
+                                if isAutoContinuing {
+                                    ProgressView()
+                                        .tint(.white)
+                                } else {
+                                    Image(systemName: "network")
+                                        .font(.system(size: 16, weight: .semibold))
+                                }
+                                Text(isAutoContinuing ? "Opening Connection Setup..." : "Open Connection Setup")
                                     .font(AppFont.body(weight: .semibold))
                             }
                             .frame(maxWidth: .infinity)
@@ -91,6 +111,7 @@ struct OnboardingView: View {
                             )
                         }
                         .buttonStyle(.plain)
+                        .disabled(hasTriggeredContinue)
 
                         Text(selectedRoute.footerNote)
                             .font(AppFont.caption())
@@ -102,6 +123,24 @@ struct OnboardingView: View {
                 .scrollBounceBehavior(.basedOnSize)
             }
         }
+        .task {
+            guard isAutoContinuing, !hasTriggeredContinue else {
+                return
+            }
+
+            try? await Task.sleep(nanoseconds: 1_000_000_000)
+            continueToSetup()
+        }
+    }
+
+    private func continueToSetup() {
+        guard !hasTriggeredContinue else {
+            return
+        }
+
+        hasTriggeredContinue = true
+        isAutoContinuing = false
+        onContinue()
     }
 }
 
