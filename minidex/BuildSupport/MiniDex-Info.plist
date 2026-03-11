@@ -49,10 +49,11 @@
 	<string>4200</string>
 	<key>MINIDEX_TAILSCALE_DNS_NAME</key>
 	<string></string>
-	<key>MINIDEX_TAILSCALE_OAUTH_CLIENT_ID</key>
-	<string></string>
-	<key>MINIDEX_TAILSCALE_OAUTH_CLIENT_SECRET</key>
-	<string></string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
 	<key>UIAppFonts</key>
 	<array>
 		<string>JetBrainsMono-Regular.ttf</string>

@@ -198,13 +198,6 @@ final class ContentViewModel {
     }
 
     func attemptTailscaleDiscoveryIfNeeded(codex: CodexService, force: Bool) async {
-        guard AppEnvironment.tailscaleDiscoveryConfiguration != nil else {
-            if force {
-                tailscaleDiscoveryStatus = .unavailable
-            }
-            return
-        }
-
         if !force {
             guard !hasAttemptedInitialTailscaleDiscovery else {
                 return
@@ -294,17 +287,14 @@ extension ContentViewModel {
     }
 
     private func discoverTailscaleServerAndConnect(codex: CodexService) async {
-        guard let configuration = AppEnvironment.tailscaleDiscoveryConfiguration else {
-            tailscaleDiscoveryStatus = .unavailable
-            return
-        }
-
         isDiscoveringTailscaleServer = true
         tailscaleDiscoveryStatus = .searching
         defer { isDiscoveringTailscaleServer = false }
 
         do {
-            let result = try await tailscaleDiscoveryService.discoverCodexServer(configuration: configuration)
+            let result = try await tailscaleDiscoveryService.discoverCodexServer(
+                configuration: AppEnvironment.tailscaleDiscoveryConfiguration
+            )
             suggestedServerURL = result.serverURL
             tailscaleDiscoveryStatus = .found(result.serverURL)
 

@@ -32,7 +32,7 @@ struct OnboardingView: View {
                                 }
                             }
 
-                            Text("Open the app on the same tailnet and MiniDex can try to find Codex on your Mac automatically. If you are off-tailnet, you can still connect with a host or IP.")
+                            Text("Open the app while your iPhone and Mac are both connected to Tailscale and MiniDex should try to find Codex automatically. If you are off-tailnet, you can still connect with a host or IP.")
                                 .font(AppFont.callout())
                                 .foregroundStyle(CodexBrand.ink.opacity(0.82))
 
@@ -125,7 +125,7 @@ private enum OnboardingPairingRoute: String, CaseIterable, Identifiable {
         case .localNetwork:
             return "Use this when both devices can reach each other directly and you want to enter a host or IP yourself."
         case .tailscale:
-            return "Best path when both devices are on the same tailnet. MiniDex can try discovery before asking for a host."
+            return "Best path when both devices are on the same tailnet. MiniDex checks the local Tailscale client first so discovery can just work."
         }
     }
 
@@ -155,7 +155,7 @@ private enum OnboardingPairingRoute: String, CaseIterable, Identifiable {
                 ),
                 OnboardingSetupStep(
                     title: "Keep both devices on the same tailnet",
-                    subtitle: "If MiniDex can see your tailnet, it will try to find a Mac running Codex automatically when you open the app."
+                    subtitle: "MiniDex asks the Tailscale client on your iPhone for peers, then probes likely Macs for Codex when you open the app."
                 ),
                 OnboardingSetupStep(
                     title: "Fall back to a Tailscale host only if needed",
@@ -171,7 +171,7 @@ private enum OnboardingPairingRoute: String, CaseIterable, Identifiable {
         case .localNetwork:
             return "Local network mode is the direct fallback: start Codex on your Mac, then type or scan a reachable WebSocket URL."
         case .tailscale:
-            return "Tailscale mode is the preferred path: MiniDex looks for Codex on your Mac first, then falls back to manual host entry if needed."
+            return "Tailscale mode is the preferred path: open the app and MiniDex should look for Codex on your Mac automatically before it asks for a host."
         }
     }
 }

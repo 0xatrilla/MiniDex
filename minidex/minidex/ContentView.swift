@@ -408,7 +408,7 @@ private struct ConnectionSetupView: View {
                             .font(AppFont.title2(weight: .bold))
                             .foregroundStyle(CodexBrand.ink)
 
-                        Text("Run Codex app-server on your Mac, then paste the WebSocket URL here. Scanning a QR that contains that URL works too.")
+                        Text("Run Codex app-server on your Mac. If this iPhone is already on Tailscale, MiniDex will try to find it automatically. Otherwise, paste the WebSocket URL here or scan a QR code.")
                             .font(AppFont.callout())
                             .foregroundStyle(CodexBrand.ink.opacity(0.82))
                     }
@@ -591,9 +591,9 @@ private struct ConnectionSetupView: View {
     private var tailscaleDiscoveryPrimaryText: String {
         switch tailscaleDiscoveryStatus {
         case .idle:
-            return "If your phone and Mac share a tailnet, MiniDex can probe for Codex automatically."
+            return "If your phone is connected to Tailscale, MiniDex checks the local Tailscale client and probes your Macs automatically."
         case .searching:
-            return "Checking your tailnet for a reachable Mac running Codex..."
+            return "Reading peers from Tailscale on this iPhone and probing for a reachable Codex host..."
         case .found:
             return "Found a Codex host and trying to connect."
         case .unavailable:

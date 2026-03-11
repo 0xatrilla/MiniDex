@@ -84,7 +84,9 @@ Run the `minidex` scheme on an iPhone or iOS Simulator.
 codex app-server --listen ws://0.0.0.0:4200
 ```
 
-2. Get a reachable address for your Mac.
+2. If both your iPhone and Mac are connected to Tailscale, just open MiniDex and it will ask the local Tailscale client on the phone for peers, then probe likely Macs for Codex automatically.
+
+3. If auto-discovery does not connect, get a reachable address for your Mac.
 
 For local Wi-Fi:
 
@@ -98,7 +100,7 @@ For Tailscale:
 tailscale ip -4
 ```
 
-3. In MiniDex, either:
+4. In MiniDex, either:
 
 - paste a URL like `ws://192.168.1.25:4200`
 - paste a URL like `ws://100.x.y.z:4200`
@@ -114,6 +116,12 @@ MiniDex also accepts QR payloads that are JSON objects containing one of these k
 - `wsUrl`
 
 Once a connection succeeds, the app stores the server URL in Keychain and uses it for reconnect flows.
+
+### Tailscale Notes
+
+- There is no Tailscale OAuth setup in the app anymore
+- Auto-discovery uses the local Tailscale client on the iPhone at `100.100.100.100/localapi/v0/status`
+- Settings only expose optional discovery overrides like a preferred Codex port or MagicDNS suffix
 
 ## Architecture Overview
 

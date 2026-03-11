@@ -1,15 +1,26 @@
 // FILE: TailscaleDiscoveryService.swift
-// Purpose: Discovers Codex app-server endpoints on a tailnet and probes them before auto-connect.
+// Purpose: Discovers Codex app-server endpoints from the local Tailscale client and probes them before auto-connect.
 // Layer: Service
 // Exports: TailscaleDiscoveryConfiguration, TailscaleDiscoveryStatus, TailscaleDiscoveryService
 
 import Foundation
 
 struct TailscaleDiscoveryConfiguration: Sendable {
-    let oauthClientID: String
-    let oauthClientSecret: String
     let tailnetDNSName: String?
-    let codexPort: Int
+    let preferredCodexPort: Int
+
+    var candidatePorts: [Int] {
+        var orderedPorts: [Int] = []
+        var seenPorts: Set<Int> = []
+
+        for port in [preferredCodexPort, 4200, 8390, 4222] where port > 0 {
+            if seenPorts.insert(port).inserted {
+                orderedPorts.append(port)
+            }
+        }
+
+        return orderedPorts
+    }
 }
 
 enum TailscaleDiscoveryStatus: Equatable {
@@ -21,19 +32,16 @@ enum TailscaleDiscoveryStatus: Equatable {
 }
 
 enum TailscaleDiscoveryError: LocalizedError {
-    case notConfigured
-    case invalidOAuthResponse
-    case invalidDeviceResponse
+    case localAPIUnavailable
+    case invalidStatusResponse
     case noReachableCodexServer
 
     var errorDescription: String? {
         switch self {
-        case .notConfigured:
-            return "Tailscale discovery is not configured."
-        case .invalidOAuthResponse:
-            return "Could not authenticate to Tailscale discovery."
-        case .invalidDeviceResponse:
-            return "Could not read your tailnet device list."
+        case .localAPIUnavailable:
+            return "Tailscale is not available on this iPhone right now. Connect the phone to Tailscale or enter a host manually."
+        case .invalidStatusResponse:
+            return "MiniDex could not read peer details from the local Tailscale client."
         case .noReachableCodexServer:
             return "No Mac on your tailnet answered like Codex."
         }
@@ -46,6 +54,8 @@ struct TailscaleDiscoveryResult: Sendable {
 }
 
 final class TailscaleDiscoveryService {
+    private static let localAPIStatusURL = URL(string: "http://100.100.100.100/localapi/v0/status")!
+
     private let session: URLSession
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
@@ -57,15 +67,15 @@ final class TailscaleDiscoveryService {
         }
 
         let configuration = URLSessionConfiguration.ephemeral
-        configuration.timeoutIntervalForRequest = 4
-        configuration.timeoutIntervalForResource = 8
+        configuration.timeoutIntervalForRequest = 3
+        configuration.timeoutIntervalForResource = 6
+        configuration.waitsForConnectivity = false
         self.session = URLSession(configuration: configuration)
     }
 
     func discoverCodexServer(configuration: TailscaleDiscoveryConfiguration) async throws -> TailscaleDiscoveryResult {
-        let accessToken = try await fetchAccessToken(configuration: configuration)
-        let devices = try await fetchDevices(accessToken: accessToken)
-        let candidates = candidateURLs(from: devices, configuration: configuration)
+        let peers = try await fetchPeers()
+        let candidates = candidateURLs(from: peers, configuration: configuration)
 
         guard !candidates.isEmpty else {
             throw TailscaleDiscoveryError.noReachableCodexServer
@@ -83,64 +93,74 @@ final class TailscaleDiscoveryService {
 }
 
 private extension TailscaleDiscoveryService {
-    struct OAuthTokenResponse: Decodable {
-        let accessToken: String
+    struct StatusResponse: Decodable {
+        let peers: [String: Peer]
 
         private enum CodingKeys: String, CodingKey {
-            case accessToken = "access_token"
-        }
-    }
-
-    struct DeviceEnvelope: Decodable {
-        let devices: [Device]?
-        let machines: [Device]?
-        let items: [Device]?
-
-        var flattenedDevices: [Device] {
-            if let devices, !devices.isEmpty { return devices }
-            if let machines, !machines.isEmpty { return machines }
-            if let items, !items.isEmpty { return items }
-            return []
-        }
-    }
-
-    struct Device: Decodable {
-        let name: String?
-        let hostname: String?
-        let dnsName: String?
-        let os: String?
-        let addresses: [String]?
-        let online: Bool?
-        let isOnline: Bool?
-
-        private enum CodingKeys: String, CodingKey {
-            case name
-            case hostname
-            case dnsName
-            case dnsNameSnake = "dns_name"
-            case os
-            case addresses
-            case online
-            case isOnline
-            case isOnlineSnake = "is_online"
+            case peers = "Peer"
+            case peersLower = "peer"
         }
 
         init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: CodingKeys.self)
-            self.name = try container.decodeIfPresent(String.self, forKey: .name)
-            self.hostname = try container.decodeIfPresent(String.self, forKey: .hostname)
+            self.peers = try container.decodeIfPresent([String: Peer].self, forKey: .peers)
+                ?? container.decodeIfPresent([String: Peer].self, forKey: .peersLower)
+                ?? [:]
+        }
+    }
+
+    struct Peer: Decodable {
+        let hostName: String?
+        let dnsName: String?
+        let os: String?
+        let online: Bool?
+        let tailscaleIPs: [String]
+
+        private enum CodingKeys: String, CodingKey {
+            case hostName
+            case hostNameUpper = "HostName"
+            case dnsName
+            case dnsNameUpper = "DNSName"
+            case os
+            case osUpper = "OS"
+            case online
+            case onlineUpper = "Online"
+            case tailscaleIPs
+            case tailscaleIPsUpper = "TailscaleIPs"
+            case tailscaleIPsSnake = "tailscale_ips"
+        }
+
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            self.hostName = try container.decodeIfPresent(String.self, forKey: .hostName)
+                ?? container.decodeIfPresent(String.self, forKey: .hostNameUpper)
             self.dnsName = try container.decodeIfPresent(String.self, forKey: .dnsName)
-                ?? container.decodeIfPresent(String.self, forKey: .dnsNameSnake)
+                ?? container.decodeIfPresent(String.self, forKey: .dnsNameUpper)
             self.os = try container.decodeIfPresent(String.self, forKey: .os)
-            self.addresses = try container.decodeIfPresent([String].self, forKey: .addresses)
+                ?? container.decodeIfPresent(String.self, forKey: .osUpper)
             self.online = try container.decodeIfPresent(Bool.self, forKey: .online)
-            self.isOnline = try container.decodeIfPresent(Bool.self, forKey: .isOnline)
-                ?? container.decodeIfPresent(Bool.self, forKey: .isOnlineSnake)
+                ?? container.decodeIfPresent(Bool.self, forKey: .onlineUpper)
+            self.tailscaleIPs = try container.decodeIfPresent([String].self, forKey: .tailscaleIPs)
+                ?? container.decodeIfPresent([String].self, forKey: .tailscaleIPsUpper)
+                ?? container.decodeIfPresent([String].self, forKey: .tailscaleIPsSnake)
+                ?? []
+        }
+
+        var isReachable: Bool {
+            online ?? true
         }
 
         var isLikelyMac: Bool {
             let normalizedOS = (os ?? "").lowercased()
-            if normalizedOS.contains("ios") || normalizedOS.contains("iphone") || normalizedOS.contains("ipad") {
+
+            if normalizedOS.isEmpty {
+                return true
+            }
+
+            if normalizedOS.contains("ios")
+                || normalizedOS.contains("iphone")
+                || normalizedOS.contains("ipad")
+                || normalizedOS.contains("android") {
                 return false
             }
 
@@ -148,84 +168,60 @@ private extension TailscaleDiscoveryService {
                 || normalizedOS.contains("darwin")
                 || normalizedOS.contains("osx")
         }
-
-        var isReachable: Bool {
-            online ?? isOnline ?? true
-        }
     }
 
-    func fetchAccessToken(configuration: TailscaleDiscoveryConfiguration) async throws -> String {
-        guard let url = URL(string: "https://api.tailscale.com/api/v2/oauth/token") else {
-            throw TailscaleDiscoveryError.invalidOAuthResponse
-        }
-
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-
-        let formBody = "grant_type=client_credentials"
-        request.httpBody = Data(formBody.utf8)
-
-        let credentials = "\(configuration.oauthClientID):\(configuration.oauthClientSecret)"
-        let basicToken = Data(credentials.utf8).base64EncodedString()
-        request.setValue("Basic \(basicToken)", forHTTPHeaderField: "Authorization")
-
-        let (data, response) = try await session.data(for: request)
-        guard let httpResponse = response as? HTTPURLResponse,
-              (200..<300).contains(httpResponse.statusCode) else {
-            throw TailscaleDiscoveryError.invalidOAuthResponse
-        }
-
-        let payload = try decoder.decode(OAuthTokenResponse.self, from: data)
-        let token = payload.accessToken.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !token.isEmpty else {
-            throw TailscaleDiscoveryError.invalidOAuthResponse
-        }
-
-        return token
-    }
-
-    func fetchDevices(accessToken: String) async throws -> [Device] {
-        guard let url = URL(string: "https://api.tailscale.com/api/v2/tailnet/-/devices") else {
-            throw TailscaleDiscoveryError.invalidDeviceResponse
-        }
-
-        var request = URLRequest(url: url)
+    func fetchPeers() async throws -> [Peer] {
+        var request = URLRequest(url: Self.localAPIStatusURL)
         request.httpMethod = "GET"
-        request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
 
-        let (data, response) = try await session.data(for: request)
-        guard let httpResponse = response as? HTTPURLResponse,
-              (200..<300).contains(httpResponse.statusCode) else {
-            throw TailscaleDiscoveryError.invalidDeviceResponse
+        do {
+            let (data, response) = try await session.data(for: request)
+            guard let httpResponse = response as? HTTPURLResponse else {
+                throw TailscaleDiscoveryError.invalidStatusResponse
+            }
+
+            guard (200..<300).contains(httpResponse.statusCode) else {
+                throw TailscaleDiscoveryError.localAPIUnavailable
+            }
+
+            let status = try decoder.decode(StatusResponse.self, from: data)
+            let peers = status.peers.values.filter { $0.isReachable && $0.isLikelyMac }
+            guard !peers.isEmpty else {
+                throw TailscaleDiscoveryError.noReachableCodexServer
+            }
+
+            return peers
+        } catch let error as TailscaleDiscoveryError {
+            throw error
+        } catch {
+            if let urlError = error as? URLError,
+               urlError.code == .cannotConnectToHost
+                || urlError.code == .notConnectedToInternet
+                || urlError.code == .networkConnectionLost
+                || urlError.code == .timedOut {
+                throw TailscaleDiscoveryError.localAPIUnavailable
+            }
+
+            throw TailscaleDiscoveryError.invalidStatusResponse
         }
-
-        if let envelope = try? decoder.decode(DeviceEnvelope.self, from: data),
-           !envelope.flattenedDevices.isEmpty {
-            return envelope.flattenedDevices
-        }
-
-        if let devices = try? decoder.decode([Device].self, from: data),
-           !devices.isEmpty {
-            return devices
-        }
-
-        throw TailscaleDiscoveryError.invalidDeviceResponse
     }
 
     func candidateURLs(
-        from devices: [Device],
+        from peers: [Peer],
         configuration: TailscaleDiscoveryConfiguration
     ) -> [String] {
         var orderedCandidates: [String] = []
         var seenCandidates: Set<String> = []
 
-        for device in devices where device.isLikelyMac && device.isReachable {
-            let hosts = hostCandidates(for: device, configuration: configuration)
+        for peer in peers {
+            let hosts = hostCandidates(for: peer, configuration: configuration)
             for host in hosts {
-                let urlString = websocketURLString(host: host, port: configuration.codexPort)
-                if seenCandidates.insert(urlString).inserted {
-                    orderedCandidates.append(urlString)
+                for port in configuration.candidatePorts {
+                    let urlString = websocketURLString(host: host, port: port)
+                    if seenCandidates.insert(urlString).inserted {
+                        orderedCandidates.append(urlString)
+                    }
                 }
             }
         }
@@ -234,22 +230,33 @@ private extension TailscaleDiscoveryService {
     }
 
     func hostCandidates(
-        for device: Device,
+        for peer: Peer,
         configuration: TailscaleDiscoveryConfiguration
     ) -> [String] {
-        let rawHosts = [device.dnsName, device.hostname, device.name]
-            .compactMap { $0?.trimmingCharacters(in: .whitespacesAndNewlines) }
-            .filter { !$0.isEmpty }
-
         var orderedHosts: [String] = []
         var seenHosts: Set<String> = []
+
+        for address in peer.tailscaleIPs.sorted(by: hostPrioritySort) {
+            let trimmedAddress = address.trimmingCharacters(in: .whitespacesAndNewlines)
+            guard !trimmedAddress.isEmpty else { continue }
+
+            if seenHosts.insert(trimmedAddress).inserted {
+                orderedHosts.append(trimmedAddress)
+            }
+        }
+
+        let rawHosts = [peer.dnsName, peer.hostName]
+            .compactMap { $0?.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
 
         for rawHost in rawHosts {
             let normalizedHost = rawHost
                 .replacingOccurrences(of: ".local", with: "")
                 .trimmingCharacters(in: CharacterSet(charactersIn: "."))
 
-            if !normalizedHost.isEmpty && seenHosts.insert(normalizedHost).inserted {
+            guard !normalizedHost.isEmpty else { continue }
+
+            if seenHosts.insert(normalizedHost).inserted {
                 orderedHosts.append(normalizedHost)
             }
 
@@ -263,15 +270,18 @@ private extension TailscaleDiscoveryService {
             }
         }
 
-        for address in device.addresses ?? [] {
-            let trimmedAddress = address.trimmingCharacters(in: .whitespacesAndNewlines)
-            guard !trimmedAddress.isEmpty else { continue }
-            if seenHosts.insert(trimmedAddress).inserted {
-                orderedHosts.append(trimmedAddress)
-            }
+        return orderedHosts
+    }
+
+    func hostPrioritySort(lhs: String, rhs: String) -> Bool {
+        let lhsHasIPv4 = !lhs.contains(":")
+        let rhsHasIPv4 = !rhs.contains(":")
+
+        if lhsHasIPv4 != rhsHasIPv4 {
+            return lhsHasIPv4
         }
 
-        return orderedHosts
+        return lhs < rhs
     }
 
     func websocketURLString(host: String, port: Int) -> String {
@@ -283,7 +293,7 @@ private extension TailscaleDiscoveryService {
 
     func firstReachableCodexServerURL(in candidates: [String]) async -> String? {
         await withTaskGroup(of: String?.self, returning: String?.self) { taskGroup in
-            for candidate in candidates.prefix(12) {
+            for candidate in candidates.prefix(16) {
                 taskGroup.addTask { [session, encoder, decoder] in
                     await Self.probeCodexServer(
                         candidate,

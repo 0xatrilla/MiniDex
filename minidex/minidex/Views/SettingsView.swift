@@ -19,6 +19,7 @@ struct SettingsView: View {
                 SettingsArchivedChatsCard()
                 SettingsAppearanceCard(useJetBrainsMono: $useJetBrainsMono)
                 SettingsNotificationsCard()
+                SettingsTailscaleDiscoveryCard()
                 runtimeDefaultsSection
                 connectionSection
                 SettingsAboutCard()
@@ -346,6 +347,100 @@ private struct SettingsArchivedChatsCard: View {
             }
             .buttonStyle(.plain)
         }
+    }
+}
+
+private struct SettingsTailscaleDiscoveryCard: View {
+    @State private var tailnetDNSName = ""
+    @State private var codexPort = "4200"
+    @State private var statusMessage: String? = nil
+    @State private var hasLoadedSettings = false
+
+    var body: some View {
+        SettingsCard(title: "Tailscale Discovery") {
+            Text("MiniDex asks the local Tailscale client on this iPhone for peers, then probes likely Macs for Codex automatically. If both devices are connected to Tailscale, there is usually nothing to configure.")
+                .font(AppFont.caption())
+                .foregroundStyle(.secondary)
+
+            VStack(alignment: .leading, spacing: 6) {
+                Text("MagicDNS suffix (optional)")
+                    .font(AppFont.caption(weight: .semibold))
+                    .foregroundStyle(.secondary)
+                TextField("example.ts.net", text: $tailnetDNSName)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
+                    .font(AppFont.mono(.caption))
+            }
+
+            VStack(alignment: .leading, spacing: 6) {
+                Text("Preferred Codex port")
+                    .font(AppFont.caption(weight: .semibold))
+                    .foregroundStyle(.secondary)
+                TextField("4200", text: $codexPort)
+                    .keyboardType(.numberPad)
+                    .font(AppFont.mono(.caption))
+            }
+
+            if let statusMessage, !statusMessage.isEmpty {
+                Text(statusMessage)
+                    .font(AppFont.caption())
+                    .foregroundStyle(.secondary)
+            } else {
+                Text(hasCustomOverrides
+                     ? "Saved. MiniDex will use your custom suffix and port while it probes Tailscale peers."
+                     : "Using defaults. MiniDex will try Tailscale discovery on launch, then fall back to manual host entry if nothing answers.")
+                    .font(AppFont.caption())
+                    .foregroundStyle(.secondary)
+            }
+
+            SettingsButton("Save Discovery Defaults") {
+                save()
+            }
+
+            if hasCustomOverrides {
+                SettingsButton("Reset Discovery Defaults", role: .destructive) {
+                    clear()
+                }
+            }
+        }
+        .task {
+            guard !hasLoadedSettings else {
+                return
+            }
+            hasLoadedSettings = true
+            load()
+        }
+    }
+
+    private var hasCustomOverrides: Bool {
+        AppEnvironment.tailscaleDiscoveryStoredSettings.hasCustomOverrides
+    }
+
+    private func load() {
+        let settings = AppEnvironment.tailscaleDiscoveryStoredSettings
+        tailnetDNSName = settings.tailnetDNSName
+        codexPort = String(settings.codexPort)
+        statusMessage = nil
+    }
+
+    private func save() {
+        let normalizedPort = Int(codexPort.trimmingCharacters(in: .whitespacesAndNewlines)) ?? 4200
+        let settings = TailscaleDiscoveryStoredSettings(
+            tailnetDNSName: tailnetDNSName,
+            codexPort: max(1, normalizedPort)
+        )
+        AppEnvironment.saveTailscaleDiscoveryStoredSettings(settings)
+        codexPort = String(max(1, normalizedPort))
+        statusMessage = settings.hasCustomOverrides
+            ? "Tailscale discovery defaults saved."
+            : "Defaults restored. MiniDex will use the built-in Tailscale discovery flow."
+    }
+
+    private func clear() {
+        AppEnvironment.clearTailscaleDiscoveryStoredSettings()
+        tailnetDNSName = ""
+        codexPort = "4200"
+        statusMessage = "Tailscale discovery defaults reset."
     }
 }
 
