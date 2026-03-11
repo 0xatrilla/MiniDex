@@ -223,9 +223,17 @@ struct ContentView: View {
             HomeEmptyStateView(
                 isConnected: codex.isConnected,
                 isConnecting: codex.isConnecting || viewModel.isAttemptingAutoReconnect,
+                lastErrorMessage: codex.lastErrorMessage,
+                tailscaleDiscoveryStatus: viewModel.tailscaleDiscoveryStatus,
+                isSearchingTailscale: viewModel.isDiscoveringTailscaleServer,
                 onToggleConnection: {
                     Task {
                         await viewModel.toggleConnection(codex: codex)
+                    }
+                },
+                onRetryTailscaleDiscovery: {
+                    Task {
+                        await viewModel.retryTailscaleDiscovery(codex: codex)
                     }
                 }
             ) {

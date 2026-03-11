@@ -9,7 +9,11 @@ import SwiftUI
 struct HomeEmptyStateView<AuthSection: View>: View {
     let isConnected: Bool
     let isConnecting: Bool
+    let lastErrorMessage: String?
+    let tailscaleDiscoveryStatus: TailscaleDiscoveryStatus
+    let isSearchingTailscale: Bool
     let onToggleConnection: () -> Void
+    let onRetryTailscaleDiscovery: () -> Void
     @ViewBuilder let authSection: () -> AuthSection
 
     @State private var dotPulse = false
@@ -67,6 +71,17 @@ struct HomeEmptyStateView<AuthSection: View>: View {
                         StatusTile(title: "Link", value: isConnected ? "Live" : "Standby")
                         StatusTile(title: "Sync", value: isConnecting ? "Warm" : "Ready")
                         StatusTile(title: "Mode", value: "Private")
+                    }
+
+                    if shouldShowTailscaleDiscoveryCard {
+                        tailscaleDiscoveryCard
+                    }
+
+                    if let lastErrorMessage, !lastErrorMessage.isEmpty {
+                        Text(lastErrorMessage)
+                            .font(AppFont.caption())
+                            .multilineTextAlignment(.center)
+                            .foregroundStyle(.red)
                     }
 
                     Button(action: onToggleConnection) {
@@ -167,6 +182,68 @@ struct HomeEmptyStateView<AuthSection: View>: View {
             return "Threads, approvals, and run state stay close at hand while Codex works on your Mac."
         }
         return "Reconnect with your saved server, paste a new Codex app-server URL, or scan a server QR to restore live threads and git-aware controls."
+    }
+
+    private var shouldShowTailscaleDiscoveryCard: Bool {
+        !isConnected && (isSearchingTailscale || tailscaleDiscoveryStatus != .idle)
+    }
+
+    @ViewBuilder
+    private var tailscaleDiscoveryCard: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(alignment: .center, spacing: 10) {
+                Image(systemName: "network.badge.shield.half.filled")
+                    .foregroundStyle(CodexBrand.ink)
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Tailscale Discovery")
+                        .font(AppFont.subheadline(weight: .semibold))
+                        .foregroundStyle(CodexBrand.ink)
+
+                    Text(tailscaleDiscoveryPrimaryText)
+                        .font(AppFont.caption())
+                        .foregroundStyle(.secondary)
+                }
+
+                Spacer()
+
+                if isSearchingTailscale {
+                    ProgressView()
+                        .controlSize(.small)
+                }
+            }
+
+            if case .found(let discoveredURL) = tailscaleDiscoveryStatus {
+                Text(discoveredURL)
+                    .font(AppFont.mono(.caption))
+                    .foregroundStyle(CodexBrand.ink.opacity(0.84))
+            }
+
+            if !isSearchingTailscale {
+                Button("Retry Tailscale Discovery") {
+                    onRetryTailscaleDiscovery()
+                }
+                .buttonStyle(.bordered)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(14)
+        .background(CodexBrand.cardSurface, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+    }
+
+    private var tailscaleDiscoveryPrimaryText: String {
+        switch tailscaleDiscoveryStatus {
+        case .idle:
+            return "If your phone is connected to Tailscale, MiniDex checks the local Tailscale client and probes your Macs automatically."
+        case .searching:
+            return "Reading peers from Tailscale on this iPhone and probing for a reachable Codex host..."
+        case .found:
+            return "Found a Codex host and trying to connect."
+        case .unavailable:
+            return "No reachable Codex host was found on Tailscale. Enter a host or IP manually."
+        case .failed(let message):
+            return message
+        }
     }
 }
 

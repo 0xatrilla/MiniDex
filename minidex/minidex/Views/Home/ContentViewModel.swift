@@ -84,7 +84,9 @@ final class ContentViewModel {
                 performAutoRetry: true
             )
         } catch {
-            if codex.lastErrorMessage?.isEmpty ?? true {
+            await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: true)
+
+            if !codex.isConnected, codex.lastErrorMessage?.isEmpty ?? true {
                 codex.lastErrorMessage = codex.userFacingConnectFailureMessage(error)
             }
         }
