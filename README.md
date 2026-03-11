@@ -1,3 +1,5 @@
+
+
 # MiniDex
 
 MiniDex is an iPhone-first SwiftUI companion app for Codex sessions running on your Mac. It connects directly to `codex app-server` over WebSocket, lets you monitor live threads from your phone, and adds mobile controls for approvals, queued prompts, image attachments, plan mode, and repo-aware git actions.
