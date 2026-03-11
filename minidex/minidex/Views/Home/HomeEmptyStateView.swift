@@ -61,7 +61,7 @@ struct HomeEmptyStateView<AuthSection: View>: View {
                     }
                     .padding(.horizontal, 14)
                     .padding(.vertical, 7)
-                    .background(Color.white.opacity(0.88), in: Capsule())
+                    .background(CodexBrand.chipSurface, in: Capsule())
 
                     HStack(spacing: 12) {
                         StatusTile(title: "Link", value: isConnected ? "Live" : "Standby")
@@ -97,7 +97,7 @@ struct HomeEmptyStateView<AuthSection: View>: View {
                 .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .overlay(
                     RoundedRectangle(cornerRadius: 30, style: .continuous)
-                        .stroke(Color.white.opacity(0.55), lineWidth: 1)
+                        .stroke(CodexBrand.cardStroke, lineWidth: 1)
                 )
 
                 Spacer()
@@ -144,7 +144,7 @@ struct HomeEmptyStateView<AuthSection: View>: View {
 
     private var primaryButtonBackground: some ShapeStyle {
         if isConnected {
-            return AnyShapeStyle(Color.white.opacity(0.8))
+            return AnyShapeStyle(CodexBrand.cardSurfaceStrong)
         }
         return AnyShapeStyle(
             LinearGradient(
@@ -186,6 +186,6 @@ private struct StatusTile: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.horizontal, 12)
         .padding(.vertical, 10)
-        .background(Color.white.opacity(0.78), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+        .background(CodexBrand.cardSurface, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
     }
 }

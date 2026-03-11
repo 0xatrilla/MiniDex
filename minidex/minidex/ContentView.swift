@@ -417,7 +417,7 @@ private struct ConnectionSetupView: View {
                     .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))
                     .overlay(
                         RoundedRectangle(cornerRadius: 30, style: .continuous)
-                            .stroke(Color.white.opacity(0.5), lineWidth: 1)
+                            .stroke(CodexBrand.cardStroke, lineWidth: 1)
                     )
 
                     VStack(alignment: .leading, spacing: 12) {
@@ -450,7 +450,7 @@ private struct ConnectionSetupView: View {
                                 .keyboardType(.URL)
                                 .padding(.horizontal, 14)
                                 .padding(.vertical, 14)
-                                .background(Color.white.opacity(0.82), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .background(CodexBrand.cardSurfaceStrong, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                         }
 
                         if let lastErrorMessage, !lastErrorMessage.isEmpty {
@@ -491,10 +491,10 @@ private struct ConnectionSetupView: View {
                         .opacity(isConnectDisabled ? 0.7 : 1)
                     }
                     .padding(22)
-                    .background(Color.white.opacity(0.62), in: RoundedRectangle(cornerRadius: 28, style: .continuous))
+                    .background(CodexBrand.cardSurface, in: RoundedRectangle(cornerRadius: 28, style: .continuous))
                     .overlay(
                         RoundedRectangle(cornerRadius: 28, style: .continuous)
-                            .stroke(Color.white.opacity(0.55), lineWidth: 1)
+                            .stroke(CodexBrand.cardStroke, lineWidth: 1)
                     )
 
                     VStack(alignment: .leading, spacing: 12) {
@@ -538,7 +538,6 @@ private struct ConnectionSetupView: View {
                 }
             }
         }
-        .preferredColorScheme(.light)
     }
 
     @ViewBuilder
@@ -581,7 +580,7 @@ private struct ConnectionSetupView: View {
                 }
             }
             .padding(14)
-            .background(Color.white.opacity(0.72), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+            .background(CodexBrand.cardSurface, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
         }
     }
 
@@ -648,7 +647,7 @@ private struct ConnectionCommandRow: View {
         }
         .background(
             RoundedRectangle(cornerRadius: 8, style: .continuous)
-                .fill(Color.white.opacity(0.84))
+                .fill(CodexBrand.cardSurfaceStrong)
         )
     }
 }

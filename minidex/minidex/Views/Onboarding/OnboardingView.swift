@@ -47,7 +47,7 @@ struct OnboardingView: View {
                         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))
                         .overlay(
                             RoundedRectangle(cornerRadius: 30, style: .continuous)
-                                .stroke(Color.white.opacity(0.5), lineWidth: 1)
+                                .stroke(CodexBrand.cardStroke, lineWidth: 1)
                         )
                         .padding(.top, max(32, geo.safeAreaInsets.top + 8))
 
@@ -102,7 +102,6 @@ struct OnboardingView: View {
                 .scrollBounceBehavior(.basedOnSize)
             }
         }
-        .preferredColorScheme(.light)
     }
 }
 
@@ -209,11 +208,11 @@ private struct OnboardingRoutePicker: View {
                     .padding(14)
                     .background(
                         RoundedRectangle(cornerRadius: 18, style: .continuous)
-                            .fill(selection == route ? Color.white.opacity(0.9) : Color.white.opacity(0.58))
+                            .fill(selection == route ? CodexBrand.cardSurfaceStrong : CodexBrand.cardSurface)
                     )
                     .overlay(
                         RoundedRectangle(cornerRadius: 18, style: .continuous)
-                            .stroke(selection == route ? CodexBrand.accent.opacity(0.6) : Color.white.opacity(0.5), lineWidth: 1)
+                            .stroke(selection == route ? CodexBrand.accent.opacity(0.6) : CodexBrand.cardStroke, lineWidth: 1)
                     )
                 }
                 .buttonStyle(.plain)
@@ -258,10 +257,10 @@ private struct OnboardingStepRow: View {
             Spacer(minLength: 0)
         }
         .padding(16)
-        .background(Color.white.opacity(0.74), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .background(CodexBrand.cardSurface, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
         .overlay(
             RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .stroke(Color.white.opacity(0.65), lineWidth: 1)
+                .stroke(CodexBrand.cardStroke, lineWidth: 1)
         )
     }
 }
@@ -275,7 +274,7 @@ private struct OnboardingFeatureBadge: View {
             .foregroundStyle(CodexBrand.ink)
             .padding(.horizontal, 12)
             .padding(.vertical, 8)
-            .background(Color.white.opacity(0.72), in: Capsule())
+            .background(CodexBrand.chipSurface, in: Capsule())
     }
 }
 
@@ -324,7 +323,7 @@ private struct OnboardingCommandRow: View {
         }
         .background(
             RoundedRectangle(cornerRadius: 8, style: .continuous)
-                .fill(Color.white.opacity(0.84))
+                .fill(CodexBrand.cardSurfaceStrong)
         )
     }
 }
