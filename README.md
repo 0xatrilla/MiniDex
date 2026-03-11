@@ -144,9 +144,3 @@ Swift Package Manager resolves these packages for the current project:
 - [`textual`](https://github.com/gonzalezreal/textual.git) for markdown/text rendering
 - [`swiftui-math`](https://github.com/gonzalezreal/swiftui-math)
 - [`swift-concurrency-extras`](https://github.com/pointfreeco/swift-concurrency-extras)
-
-## Known Gaps
-
-- The Xcode project still defines `minidexTests` and `minidexUITests`, but there are no checked-in test sources in the repository right now.
-- The project is currently iPhone-only.
-- This repository does not ship a standalone Mac companion app; the supported workflow is direct connection to `codex app-server`.
