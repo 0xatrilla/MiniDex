@@ -43,6 +43,16 @@
 	<string>MiniDex needs photo library access so you can attach images to your prompts.</string>
 	<key>MINIDEX_DEFAULT_BRIDGE_URL</key>
 	<string></string>
+	<key>MINIDEX_DEFAULT_SERVER_URL</key>
+	<string></string>
+	<key>MINIDEX_TAILSCALE_CODEX_PORT</key>
+	<string>4200</string>
+	<key>MINIDEX_TAILSCALE_DNS_NAME</key>
+	<string></string>
+	<key>MINIDEX_TAILSCALE_OAUTH_CLIENT_ID</key>
+	<string></string>
+	<key>MINIDEX_TAILSCALE_OAUTH_CLIENT_SECRET</key>
+	<string></string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>JetBrainsMono-Regular.ttf</string>

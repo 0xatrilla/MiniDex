@@ -11,9 +11,14 @@ import Observation
 @Observable
 final class ContentViewModel {
     private var hasAttemptedInitialAutoConnect = false
+    private var hasAttemptedInitialTailscaleDiscovery = false
     private var lastSidebarOpenSyncAt: Date = .distantPast
     private let autoReconnectBackoffNanoseconds: [UInt64] = [1_000_000_000, 3_000_000_000]
+    private let tailscaleDiscoveryService = TailscaleDiscoveryService()
     private(set) var isRunningAutoReconnect = false
+    private(set) var isDiscoveringTailscaleServer = false
+    private(set) var tailscaleDiscoveryStatus: TailscaleDiscoveryStatus = .idle
+    private(set) var suggestedServerURL: String? = nil
 
     var isAttemptingAutoReconnect: Bool {
         isRunningAutoReconnect
@@ -68,6 +73,7 @@ final class ContentViewModel {
         }
 
         guard let serverURL = codex.normalizedSavedServerURL else {
+            await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: false)
             return
         }
 
@@ -107,6 +113,12 @@ final class ContentViewModel {
             )
         } catch {
             // Keep the saved server URL so temporary network outages can recover on the next retry.
+            await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: false)
+            return
+        }
+
+        if !codex.isConnected {
+            await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: false)
         }
     }
 
@@ -184,6 +196,36 @@ final class ContentViewModel {
             codex.lastErrorMessage = "Could not reconnect. Tap Reconnect to try again."
         }
     }
+
+    func attemptTailscaleDiscoveryIfNeeded(codex: CodexService, force: Bool) async {
+        guard AppEnvironment.tailscaleDiscoveryConfiguration != nil else {
+            if force {
+                tailscaleDiscoveryStatus = .unavailable
+            }
+            return
+        }
+
+        if !force {
+            guard !hasAttemptedInitialTailscaleDiscovery else {
+                return
+            }
+            hasAttemptedInitialTailscaleDiscovery = true
+        }
+
+        guard !codex.isConnected, !codex.isConnecting else {
+            return
+        }
+
+        guard !isRunningAutoReconnect, !isDiscoveringTailscaleServer else {
+            return
+        }
+
+        await discoverTailscaleServerAndConnect(codex: codex)
+    }
+
+    func retryTailscaleDiscovery(codex: CodexService) async {
+        await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: true)
+    }
 }
 
 extension ContentViewModel {
@@ -248,6 +290,39 @@ extension ContentViewModel {
             codex.shouldAutoReconnectOnForeground = false
             codex.lastErrorMessage = codex.userFacingConnectFailureMessage(lastError)
             throw lastError
+        }
+    }
+
+    private func discoverTailscaleServerAndConnect(codex: CodexService) async {
+        guard let configuration = AppEnvironment.tailscaleDiscoveryConfiguration else {
+            tailscaleDiscoveryStatus = .unavailable
+            return
+        }
+
+        isDiscoveringTailscaleServer = true
+        tailscaleDiscoveryStatus = .searching
+        defer { isDiscoveringTailscaleServer = false }
+
+        do {
+            let result = try await tailscaleDiscoveryService.discoverCodexServer(configuration: configuration)
+            suggestedServerURL = result.serverURL
+            tailscaleDiscoveryStatus = .found(result.serverURL)
+
+            SecureStore.writeString(result.serverURL, for: CodexSecureKeys.serverURL)
+            codex.serverURL = result.serverURL
+
+            try await connectWithAutoRecovery(
+                codex: codex,
+                serverURL: result.serverURL,
+                performAutoRetry: true
+            )
+        } catch TailscaleDiscoveryError.noReachableCodexServer {
+            tailscaleDiscoveryStatus = .unavailable
+        } catch {
+            let message = error.localizedDescription.trimmingCharacters(in: .whitespacesAndNewlines)
+            tailscaleDiscoveryStatus = .failed(
+                message.isEmpty ? "Tailscale discovery failed." : message
+            )
         }
     }
 }

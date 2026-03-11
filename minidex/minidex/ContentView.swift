@@ -103,11 +103,18 @@ struct ContentView: View {
         ConnectionSetupView(
             isConnecting: codex.isConnecting || viewModel.isAttemptingAutoReconnect,
             lastErrorMessage: codex.lastErrorMessage,
-            suggestedServerURL: AppEnvironment.serverURL,
+            suggestedServerURL: viewModel.suggestedServerURL ?? AppEnvironment.serverURL,
             canReturnToReconnectShell: codex.hasSavedServerConnection,
+            tailscaleDiscoveryStatus: viewModel.tailscaleDiscoveryStatus,
+            isSearchingTailscale: viewModel.isDiscoveringTailscaleServer,
             onConnect: { serverURL in
                 Task {
                     await viewModel.connect(serverURL: serverURL, codex: codex)
+                }
+            },
+            onRetryTailscaleDiscovery: {
+                Task {
+                    await viewModel.retryTailscaleDiscovery(codex: codex)
                 }
             },
             onScanQRCode: {
@@ -117,6 +124,9 @@ struct ContentView: View {
                 withAnimation { isShowingConnectionSetup = false }
             }
         )
+        .task {
+            await viewModel.attemptTailscaleDiscoveryIfNeeded(codex: codex, force: false)
+        }
         .fullScreenCover(isPresented: $isShowingPairingScanner) {
             QRScannerView { target in
                 Task {
@@ -364,7 +374,10 @@ private struct ConnectionSetupView: View {
     let lastErrorMessage: String?
     let suggestedServerURL: String?
     let canReturnToReconnectShell: Bool
+    let tailscaleDiscoveryStatus: TailscaleDiscoveryStatus
+    let isSearchingTailscale: Bool
     let onConnect: (String) -> Void
+    let onRetryTailscaleDiscovery: () -> Void
     let onScanQRCode: () -> Void
     let onCancel: () -> Void
 
@@ -412,6 +425,8 @@ private struct ConnectionSetupView: View {
                             .font(AppFont.caption(weight: .semibold))
                             .foregroundStyle(CodexBrand.accentMuted)
                             .textCase(.uppercase)
+
+                        tailscaleDiscoveryCard
 
                         Text("Run this on your Mac:")
                             .font(AppFont.subheadline(weight: .medium))
@@ -524,6 +539,69 @@ private struct ConnectionSetupView: View {
             }
         }
         .preferredColorScheme(.light)
+    }
+
+    @ViewBuilder
+    private var tailscaleDiscoveryCard: some View {
+        if shouldShowTailscaleDiscoveryCard {
+            VStack(alignment: .leading, spacing: 10) {
+                HStack(alignment: .center, spacing: 10) {
+                    Image(systemName: "network.badge.shield.half.filled")
+                        .foregroundStyle(CodexBrand.ink)
+
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Tailscale Discovery")
+                            .font(AppFont.subheadline(weight: .semibold))
+                            .foregroundStyle(CodexBrand.ink)
+
+                        Text(tailscaleDiscoveryPrimaryText)
+                            .font(AppFont.caption())
+                            .foregroundStyle(.secondary)
+                    }
+
+                    Spacer()
+
+                    if isSearchingTailscale {
+                        ProgressView()
+                            .controlSize(.small)
+                    }
+                }
+
+                if case .found(let discoveredURL) = tailscaleDiscoveryStatus {
+                    Text(discoveredURL)
+                        .font(AppFont.mono(.caption))
+                        .foregroundStyle(CodexBrand.ink.opacity(0.84))
+                }
+
+                if !isSearchingTailscale {
+                    Button("Retry Tailscale Discovery") {
+                        onRetryTailscaleDiscovery()
+                    }
+                    .buttonStyle(.bordered)
+                }
+            }
+            .padding(14)
+            .background(Color.white.opacity(0.72), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+        }
+    }
+
+    private var shouldShowTailscaleDiscoveryCard: Bool {
+        isSearchingTailscale || tailscaleDiscoveryStatus != .idle
+    }
+
+    private var tailscaleDiscoveryPrimaryText: String {
+        switch tailscaleDiscoveryStatus {
+        case .idle:
+            return "If your phone and Mac share a tailnet, MiniDex can probe for Codex automatically."
+        case .searching:
+            return "Checking your tailnet for a reachable Mac running Codex..."
+        case .found:
+            return "Found a Codex host and trying to connect."
+        case .unavailable:
+            return "No reachable Codex host was found on Tailscale. Enter a host or IP manually."
+        case .failed(let message):
+            return message
+        }
     }
 }
 
