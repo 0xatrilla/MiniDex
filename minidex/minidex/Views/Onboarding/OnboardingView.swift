@@ -8,7 +8,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     let onContinue: () -> Void
-    @State private var selectedRoute: OnboardingPairingRoute = .localNetwork
+    @State private var selectedRoute: OnboardingPairingRoute = .tailscale
 
     var body: some View {
         ZStack {
@@ -32,14 +32,14 @@ struct OnboardingView: View {
                                 }
                             }
 
-                            Text("Connect once, then monitor runs, review approvals, and steer active work from your phone without inheriting somebody else's product shell.")
+                            Text("Open the app on the same tailnet and MiniDex can try to find Codex on your Mac automatically. If you are off-tailnet, you can still connect with a host or IP.")
                                 .font(AppFont.callout())
                                 .foregroundStyle(CodexBrand.ink.opacity(0.82))
 
                             HStack(spacing: 10) {
                                 OnboardingFeatureBadge(title: "Live threads")
                                 OnboardingFeatureBadge(title: "Fast approvals")
-                                OnboardingFeatureBadge(title: "Git aware")
+                                OnboardingFeatureBadge(title: "Auto-discovery")
                             }
                         }
                         .padding(24)
@@ -73,7 +73,7 @@ struct OnboardingView: View {
 
                         Button(action: onContinue) {
                             HStack(spacing: 10) {
-                                Image(systemName: "qrcode.viewfinder")
+                                Image(systemName: "network")
                                     .font(.system(size: 16, weight: .semibold))
                                 Text("Open Connection Setup")
                                     .font(AppFont.body(weight: .semibold))
@@ -124,9 +124,9 @@ private enum OnboardingPairingRoute: String, CaseIterable, Identifiable {
     var subtitle: String {
         switch self {
         case .localNetwork:
-            return "Fastest path when your phone and Mac can reach each other directly."
+            return "Use this when both devices can reach each other directly and you want to enter a host or IP yourself."
         case .tailscale:
-            return "Use your tailnet when the Mac is away from the phone's local network."
+            return "Best path when both devices are on the same tailnet. MiniDex can try discovery before asking for a host."
         }
     }
 
@@ -139,13 +139,13 @@ private enum OnboardingPairingRoute: String, CaseIterable, Identifiable {
                     command: "codex app-server --listen ws://0.0.0.0:4200"
                 ),
                 OnboardingSetupStep(
-                    title: "Find your Mac's local IP address",
+                    title: "Find your Mac's reachable local address",
                     command: "ipconfig getifaddr en0",
                     subtitle: "If you're on Ethernet or another interface, use that address instead."
                 ),
                 OnboardingSetupStep(
-                    title: "Enter the server URL in MiniDex",
-                    subtitle: "Use `ws://<your-mac-ip>:4200`, or scan any QR code that contains that WebSocket URL."
+                    title: "Enter the host or IP in MiniDex",
+                    subtitle: "Use `ws://<your-mac-ip>:4200`, or scan a QR code that contains that WebSocket URL."
                 )
             ]
         case .tailscale:
@@ -155,13 +155,13 @@ private enum OnboardingPairingRoute: String, CaseIterable, Identifiable {
                     command: "codex app-server --listen ws://0.0.0.0:4200"
                 ),
                 OnboardingSetupStep(
-                    title: "Get your Mac's Tailscale address",
-                    command: "tailscale ip -4",
-                    subtitle: "A MagicDNS hostname works too, as long as both devices are signed into the same tailnet."
+                    title: "Keep both devices on the same tailnet",
+                    subtitle: "If MiniDex can see your tailnet, it will try to find a Mac running Codex automatically when you open the app."
                 ),
                 OnboardingSetupStep(
-                    title: "Enter the Tailscale server URL in MiniDex",
-                    subtitle: "Use `ws://<tailscale-ip-or-name>:4200`, or scan a QR code containing that URL."
+                    title: "Fall back to a Tailscale host only if needed",
+                    command: "tailscale ip -4",
+                    subtitle: "If discovery does not connect right away, enter `ws://<tailscale-ip-or-name>:4200` manually. A MagicDNS hostname works too."
                 ),
             ]
         }
@@ -170,9 +170,9 @@ private enum OnboardingPairingRoute: String, CaseIterable, Identifiable {
     var footerNote: String {
         switch self {
         case .localNetwork:
-            return "MiniDex can talk directly to Codex app-server, so you can pair with just Codex running on your Mac and a reachable WebSocket URL."
+            return "Local network mode is the direct fallback: start Codex on your Mac, then type or scan a reachable WebSocket URL."
         case .tailscale:
-            return "Tailscale keeps the direct Codex app-server workflow intact while giving your phone a stable tailnet route back to your Mac."
+            return "Tailscale mode is the preferred path: MiniDex looks for Codex on your Mac first, then falls back to manual host entry if needed."
         }
     }
 }
