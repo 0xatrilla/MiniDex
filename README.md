@@ -1,4 +1,5 @@
 
+<img width="125" height="125" alt="appicon-iOS-Default-1024x1024@1x" src="https://github.com/user-attachments/assets/77655300-fbd4-4faf-8ed8-7d040bb96529" />
 
 # MiniDex
 
