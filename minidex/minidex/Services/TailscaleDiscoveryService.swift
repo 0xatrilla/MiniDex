@@ -1,7 +1,7 @@
 // FILE: TailscaleDiscoveryService.swift
 // Purpose: Discovers Codex app-server endpoints from the local Tailscale client and probes them before auto-connect.
 // Layer: Service
-// Exports: TailscaleDiscoveryConfiguration, TailscaleDiscoveryStatus, TailscaleDiscoveryService
+// Exports: TailscaleDiscoveryConfiguration, TailscaleDiscoveryStatus, TailscaleDiscoveryCandidate, TailscaleDiscoveryService
 
 import Foundation
 import Network
@@ -49,13 +49,53 @@ enum TailscaleDiscoveryError: LocalizedError {
     }
 }
 
+enum TailscaleDiscoveryCandidateState: Sendable, Equatable {
+    case queued
+    case probing
+    case reachable
+    case unreachable
+}
+
+struct TailscaleDiscoveryCandidate: Identifiable, Sendable, Equatable {
+    let id: String
+    let displayName: String
+    let serverURL: String
+    let sourceLabel: String
+    let state: TailscaleDiscoveryCandidateState
+
+    init(
+        id: String? = nil,
+        displayName: String,
+        serverURL: String,
+        sourceLabel: String,
+        state: TailscaleDiscoveryCandidateState
+    ) {
+        self.id = id ?? serverURL
+        self.displayName = displayName
+        self.serverURL = serverURL
+        self.sourceLabel = sourceLabel
+        self.state = state
+    }
+
+    func withState(_ state: TailscaleDiscoveryCandidateState) -> Self {
+        Self(
+            id: id,
+            displayName: displayName,
+            serverURL: serverURL,
+            sourceLabel: sourceLabel,
+            state: state
+        )
+    }
+}
+
 struct TailscaleDiscoveryResult: Sendable {
     let serverURL: String
-    let probedCandidates: [String]
+    let probedCandidates: [TailscaleDiscoveryCandidate]
 }
 
 final class TailscaleDiscoveryService {
     private static let localAPIStatusURL = URL(string: "http://100.100.100.100/localapi/v0/status")!
+    private static let maxProbedCandidates = 12
 
     private let session: URLSession
 
@@ -68,26 +108,47 @@ final class TailscaleDiscoveryService {
         self.session = .shared
     }
 
-    func discoverCodexServer(configuration: TailscaleDiscoveryConfiguration) async throws -> TailscaleDiscoveryResult {
+    func discoverCodexServer(
+        configuration: TailscaleDiscoveryConfiguration,
+        onCandidateUpdate: (@Sendable (TailscaleDiscoveryCandidate) async -> Void)? = nil
+    ) async throws -> TailscaleDiscoveryResult {
         let peers = try await fetchPeers()
-        let candidates = candidateURLs(from: peers, configuration: configuration)
+        let candidates = candidateEndpoints(from: peers, configuration: configuration)
 
         guard !candidates.isEmpty else {
             throw TailscaleDiscoveryError.noReachableCodexServer
         }
 
-        guard let resolvedServerURL = await firstReachableCodexServerURL(in: candidates) else {
+        let probedCandidates = Array(candidates.prefix(Self.maxProbedCandidates))
+        for candidate in probedCandidates {
+            await onCandidateUpdate?(candidate.candidate)
+        }
+
+        guard let resolvedCandidate = await firstReachableCodexServer(
+            in: probedCandidates,
+            onCandidateUpdate: onCandidateUpdate
+        ) else {
             throw TailscaleDiscoveryError.noReachableCodexServer
         }
 
         return TailscaleDiscoveryResult(
-            serverURL: resolvedServerURL,
-            probedCandidates: candidates
+            serverURL: resolvedCandidate.serverURL,
+            probedCandidates: probedCandidates.map(\.candidate)
         )
     }
 }
 
 private extension TailscaleDiscoveryService {
+    struct CandidateHost {
+        let displayName: String
+        let host: String
+        let sourceLabel: String
+    }
+
+    struct CandidateEndpoint: Sendable {
+        let candidate: TailscaleDiscoveryCandidate
+    }
+
     struct Peer {
         let hostName: String?
         let dnsName: String?
@@ -258,20 +319,29 @@ private extension TailscaleDiscoveryService {
         return []
     }
 
-    func candidateURLs(
+    func candidateEndpoints(
         from peers: [Peer],
         configuration: TailscaleDiscoveryConfiguration
-    ) -> [String] {
-        var orderedCandidates: [String] = []
+    ) -> [CandidateEndpoint] {
+        var orderedCandidates: [CandidateEndpoint] = []
         var seenCandidates: Set<String> = []
 
         for peer in peers {
             let hosts = hostCandidates(for: peer, configuration: configuration)
             for host in hosts {
                 for port in configuration.candidatePorts {
-                    let urlString = websocketURLString(host: host, port: port)
+                    let urlString = websocketURLString(host: host.host, port: port)
                     if seenCandidates.insert(urlString).inserted {
-                        orderedCandidates.append(urlString)
+                        orderedCandidates.append(
+                            CandidateEndpoint(
+                                candidate: TailscaleDiscoveryCandidate(
+                                    displayName: host.displayName,
+                                    serverURL: urlString,
+                                    sourceLabel: "\(host.sourceLabel) • port \(port)",
+                                    state: .queued
+                                )
+                            )
+                        )
                     }
                 }
             }
@@ -283,16 +353,23 @@ private extension TailscaleDiscoveryService {
     func hostCandidates(
         for peer: Peer,
         configuration: TailscaleDiscoveryConfiguration
-    ) -> [String] {
-        var orderedHosts: [String] = []
+    ) -> [CandidateHost] {
+        var orderedHosts: [CandidateHost] = []
         var seenHosts: Set<String> = []
+        let displayName = peerDisplayName(peer)
 
         for address in peer.tailscaleIPs.sorted(by: hostPrioritySort) {
             let trimmedAddress = address.trimmingCharacters(in: .whitespacesAndNewlines)
             guard !trimmedAddress.isEmpty else { continue }
 
             if seenHosts.insert(trimmedAddress).inserted {
-                orderedHosts.append(trimmedAddress)
+                orderedHosts.append(
+                    CandidateHost(
+                        displayName: displayName,
+                        host: trimmedAddress,
+                        sourceLabel: "Tailscale IP"
+                    )
+                )
             }
         }
 
@@ -308,7 +385,13 @@ private extension TailscaleDiscoveryService {
             guard !normalizedHost.isEmpty else { continue }
 
             if seenHosts.insert(normalizedHost).inserted {
-                orderedHosts.append(normalizedHost)
+                orderedHosts.append(
+                    CandidateHost(
+                        displayName: displayName,
+                        host: normalizedHost,
+                        sourceLabel: "Host"
+                    )
+                )
             }
 
             if !normalizedHost.contains("."),
@@ -316,12 +399,36 @@ private extension TailscaleDiscoveryService {
                !tailnetDNSName.isEmpty {
                 let fullyQualifiedHost = "\(normalizedHost).\(tailnetDNSName)"
                 if seenHosts.insert(fullyQualifiedHost).inserted {
-                    orderedHosts.append(fullyQualifiedHost)
+                    orderedHosts.append(
+                        CandidateHost(
+                            displayName: displayName,
+                            host: fullyQualifiedHost,
+                            sourceLabel: "MagicDNS"
+                        )
+                    )
                 }
             }
         }
 
         return orderedHosts
+    }
+
+    func peerDisplayName(_ peer: Peer) -> String {
+        if let hostName = peer.hostName?.trimmingCharacters(in: .whitespacesAndNewlines),
+           !hostName.isEmpty {
+            return hostName
+        }
+
+        if let dnsName = peer.dnsName?.trimmingCharacters(in: .whitespacesAndNewlines),
+           !dnsName.isEmpty {
+            return dnsName.split(separator: ".").first.map(String.init) ?? dnsName
+        }
+
+        if let address = peer.tailscaleIPs.first(where: { !$0.contains(":") }) {
+            return address
+        }
+
+        return "Mac on Tailscale"
     }
 
     func hostPrioritySort(lhs: String, rhs: String) -> Bool {
@@ -342,11 +449,17 @@ private extension TailscaleDiscoveryService {
         return "ws://\(host):\(port)"
     }
 
-    func firstReachableCodexServerURL(in candidates: [String]) async -> String? {
-        await withTaskGroup(of: String?.self, returning: String?.self) { taskGroup in
-            for candidate in candidates.prefix(16) {
+    func firstReachableCodexServer(
+        in candidates: [CandidateEndpoint],
+        onCandidateUpdate: (@Sendable (TailscaleDiscoveryCandidate) async -> Void)?
+    ) async -> TailscaleDiscoveryCandidate? {
+        await withTaskGroup(of: TailscaleDiscoveryCandidate?.self, returning: TailscaleDiscoveryCandidate?.self) { taskGroup in
+            for candidate in candidates {
                 taskGroup.addTask {
-                    await Self.probeCodexServer(candidate)
+                    await Self.probeCodexServer(
+                        candidate.candidate,
+                        onCandidateUpdate: onCandidateUpdate
+                    )
                 }
             }
 
@@ -362,20 +475,29 @@ private extension TailscaleDiscoveryService {
     }
 
     static func probeCodexServer(
-        _ candidate: String
-    ) async -> String? {
-        guard let url = URL(string: candidate),
+        _ candidate: TailscaleDiscoveryCandidate,
+        onCandidateUpdate: (@Sendable (TailscaleDiscoveryCandidate) async -> Void)?
+    ) async -> TailscaleDiscoveryCandidate? {
+        await onCandidateUpdate?(candidate.withState(.probing))
+
+        guard let url = URL(string: candidate.serverURL),
               let host = url.host else {
+            await onCandidateUpdate?(candidate.withState(.unreachable))
             return nil
         }
         let port = UInt16(url.port ?? 80)
 
+        let isReachable: Bool
         do {
-            let isReachable = try await probeOpenTCPPort(host: host, port: port)
-            return isReachable ? candidate : nil
+            isReachable = try await probeOpenTCPPort(host: host, port: port)
         } catch {
+            await onCandidateUpdate?(candidate.withState(.unreachable))
             return nil
         }
+
+        let resolvedCandidate = candidate.withState(isReachable ? .reachable : .unreachable)
+        await onCandidateUpdate?(resolvedCandidate)
+        return isReachable ? resolvedCandidate : nil
     }
 
     static func probeOpenTCPPort(host: String, port: UInt16) async throws -> Bool {

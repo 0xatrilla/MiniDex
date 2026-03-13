@@ -18,6 +18,7 @@ final class ContentViewModel {
     private(set) var isRunningAutoReconnect = false
     private(set) var isDiscoveringTailscaleServer = false
     private(set) var tailscaleDiscoveryStatus: TailscaleDiscoveryStatus = .idle
+    private(set) var tailscaleDiscoveryCandidates: [TailscaleDiscoveryCandidate] = []
     private(set) var suggestedServerURL: String? = nil
 
     var isAttemptingAutoReconnect: Bool {
@@ -292,11 +293,18 @@ extension ContentViewModel {
     private func discoverTailscaleServerAndConnect(codex: CodexService) async -> Bool {
         isDiscoveringTailscaleServer = true
         tailscaleDiscoveryStatus = .searching
+        tailscaleDiscoveryCandidates = []
+        suggestedServerURL = nil
         defer { isDiscoveringTailscaleServer = false }
 
         do {
             let result = try await tailscaleDiscoveryService.discoverCodexServer(
-                configuration: AppEnvironment.tailscaleDiscoveryConfiguration
+                configuration: AppEnvironment.tailscaleDiscoveryConfiguration,
+                onCandidateUpdate: { [self] candidate in
+                    await MainActor.run {
+                        upsertTailscaleDiscoveryCandidate(candidate)
+                    }
+                }
             )
             suggestedServerURL = result.serverURL
             tailscaleDiscoveryStatus = .found(result.serverURL)
@@ -320,5 +328,18 @@ extension ContentViewModel {
         }
 
         return false
+    }
+
+    private func upsertTailscaleDiscoveryCandidate(_ candidate: TailscaleDiscoveryCandidate) {
+        if let existingIndex = tailscaleDiscoveryCandidates.firstIndex(where: { $0.id == candidate.id }) {
+            tailscaleDiscoveryCandidates[existingIndex] = candidate
+        } else {
+            tailscaleDiscoveryCandidates.append(candidate)
+        }
+
+        if candidate.state == .reachable {
+            suggestedServerURL = candidate.serverURL
+            tailscaleDiscoveryStatus = .found(candidate.serverURL)
+        }
     }
 }

@@ -106,6 +106,7 @@ struct ContentView: View {
             suggestedServerURL: viewModel.suggestedServerURL ?? AppEnvironment.serverURL,
             canReturnToReconnectShell: codex.hasSavedServerConnection,
             tailscaleDiscoveryStatus: viewModel.tailscaleDiscoveryStatus,
+            tailscaleDiscoveryCandidates: viewModel.tailscaleDiscoveryCandidates,
             isSearchingTailscale: viewModel.isDiscoveringTailscaleServer,
             onConnect: { serverURL in
                 Task {
@@ -225,6 +226,7 @@ struct ContentView: View {
                 isConnecting: codex.isConnecting || viewModel.isAttemptingAutoReconnect,
                 lastErrorMessage: codex.lastErrorMessage,
                 tailscaleDiscoveryStatus: viewModel.tailscaleDiscoveryStatus,
+                tailscaleDiscoveryCandidates: viewModel.tailscaleDiscoveryCandidates,
                 isSearchingTailscale: viewModel.isDiscoveringTailscaleServer,
                 onToggleConnection: {
                     Task {
@@ -383,6 +385,7 @@ private struct ConnectionSetupView: View {
     let suggestedServerURL: String?
     let canReturnToReconnectShell: Bool
     let tailscaleDiscoveryStatus: TailscaleDiscoveryStatus
+    let tailscaleDiscoveryCandidates: [TailscaleDiscoveryCandidate]
     let isSearchingTailscale: Bool
     let onConnect: (String) -> Void
     let onRetryTailscaleDiscovery: () -> Void
@@ -580,6 +583,8 @@ private struct ConnectionSetupView: View {
                         .foregroundStyle(CodexBrand.ink.opacity(0.84))
                 }
 
+                TailscaleDiscoveryCandidatesView(candidates: tailscaleDiscoveryCandidates)
+
                 if !isSearchingTailscale {
                     Button("Retry Tailscale Discovery") {
                         onRetryTailscaleDiscovery()
@@ -601,7 +606,9 @@ private struct ConnectionSetupView: View {
         case .idle:
             return "If your phone is connected to Tailscale, MiniDex checks the local Tailscale client and probes your Macs automatically."
         case .searching:
-            return "Reading peers from Tailscale on this iPhone and probing for a reachable Codex host..."
+            return tailscaleDiscoveryCandidates.isEmpty
+                ? "Reading peers from Tailscale on this iPhone and probing for a reachable Codex host..."
+                : "MiniDex is checking the Macs it found on your tailnet and will auto-connect to the first live Codex host."
         case .found:
             return "Found a Codex host and trying to connect."
         case .unavailable:

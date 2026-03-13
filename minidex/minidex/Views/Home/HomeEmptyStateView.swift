@@ -11,6 +11,7 @@ struct HomeEmptyStateView<AuthSection: View>: View {
     let isConnecting: Bool
     let lastErrorMessage: String?
     let tailscaleDiscoveryStatus: TailscaleDiscoveryStatus
+    let tailscaleDiscoveryCandidates: [TailscaleDiscoveryCandidate]
     let isSearchingTailscale: Bool
     let onToggleConnection: () -> Void
     let onRetryTailscaleDiscovery: () -> Void
@@ -232,6 +233,8 @@ struct HomeEmptyStateView<AuthSection: View>: View {
                     .foregroundStyle(CodexBrand.ink.opacity(0.84))
             }
 
+            TailscaleDiscoveryCandidatesView(candidates: tailscaleDiscoveryCandidates)
+
             if !isSearchingTailscale {
                 Button("Retry Tailscale Discovery") {
                     onRetryTailscaleDiscovery()
@@ -249,7 +252,9 @@ struct HomeEmptyStateView<AuthSection: View>: View {
         case .idle:
             return "If your phone is connected to Tailscale, MiniDex checks the local Tailscale client and probes your Macs automatically."
         case .searching:
-            return "Reading peers from Tailscale on this iPhone and probing for a reachable Codex host..."
+            return tailscaleDiscoveryCandidates.isEmpty
+                ? "Reading peers from Tailscale on this iPhone and probing for a reachable Codex host..."
+                : "MiniDex is checking the Macs it found on your tailnet and will auto-connect to the first live Codex host."
         case .found:
             return "Found a Codex host and trying to connect."
         case .unavailable:
