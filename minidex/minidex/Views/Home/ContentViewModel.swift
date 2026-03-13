@@ -76,24 +76,6 @@ final class ContentViewModel {
         if await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: true) {
             return
         }
-
-        guard let serverURL = codex.normalizedSavedServerURL else {
-            return
-        }
-
-        do {
-            try await connectWithAutoRecovery(
-                codex: codex,
-                serverURL: serverURL,
-                performAutoRetry: true
-            )
-        } catch {
-            _ = await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: true)
-
-            if !codex.isConnected, codex.lastErrorMessage?.isEmpty ?? true {
-                codex.lastErrorMessage = codex.userFacingConnectFailureMessage(error)
-            }
-        }
     }
 
         // Attempts one automatic connection on app launch using the saved server URL.
@@ -108,20 +90,6 @@ final class ContentViewModel {
         }
 
         if await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: false) {
-            return
-        }
-
-        guard let serverURL = codex.normalizedSavedServerURL else {
-            return
-        }
-
-        do {
-            try await connectWithAutoRecovery(
-                codex: codex,
-                serverURL: serverURL,
-                performAutoRetry: false
-            )
-        } catch {
             return
         }
     }
@@ -222,6 +190,19 @@ final class ContentViewModel {
 
     func retryTailscaleDiscovery(codex: CodexService) async {
         _ = await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: true)
+    }
+
+    func retryTailscaleDiscoveryOnForegroundIfNeeded(codex: CodexService) async {
+        guard !codex.isConnected, !codex.isConnecting else {
+            return
+        }
+
+        switch tailscaleDiscoveryStatus {
+        case .unavailable, .failed:
+            _ = await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: true)
+        case .idle, .searching, .found:
+            return
+        }
     }
 }
 

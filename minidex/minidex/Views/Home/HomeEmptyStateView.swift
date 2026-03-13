@@ -6,19 +6,23 @@
 
 import SwiftUI
 
-struct HomeEmptyStateView<AuthSection: View>: View {
+struct HomeEmptyStateView: View {
     let isConnected: Bool
     let isConnecting: Bool
     let lastErrorMessage: String?
+    let suggestedServerURL: String?
     let tailscaleDiscoveryStatus: TailscaleDiscoveryStatus
     let tailscaleDiscoveryCandidates: [TailscaleDiscoveryCandidate]
     let isSearchingTailscale: Bool
     let onToggleConnection: () -> Void
+    let onConnect: (String) -> Void
     let onRetryTailscaleDiscovery: () -> Void
-    @ViewBuilder let authSection: () -> AuthSection
+    let onScanQRCode: () -> Void
 
     @State private var dotPulse = false
     @State private var connectionAttemptStartedAt: Date?
+    @State private var serverURL = ""
+    @State private var isShowingManualEntry = false
 
     var body: some View {
         ZStack {
@@ -106,7 +110,7 @@ struct HomeEmptyStateView<AuthSection: View>: View {
                     .disabled(isSearchingTailscale || isConnecting)
                     .padding(.top, 6)
 
-                    authSection()
+                    manualFallbackCard
                 }
                 .frame(maxWidth: 320)
                 .padding(24)
@@ -127,6 +131,10 @@ struct HomeEmptyStateView<AuthSection: View>: View {
                 connectionAttemptStartedAt = Date()
                 dotPulse = true
             }
+
+            if serverURL.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                serverURL = suggestedServerURL ?? ""
+            }
         }
         .onChange(of: isConnecting) { _, connecting in
             connectionAttemptStartedAt = (connecting || isSearchingTailscale) ? Date() : nil
@@ -135,6 +143,21 @@ struct HomeEmptyStateView<AuthSection: View>: View {
         .onChange(of: isSearchingTailscale) { _, searching in
             connectionAttemptStartedAt = (searching || isConnecting) ? Date() : nil
             dotPulse = searching || isConnecting
+        }
+        .onChange(of: suggestedServerURL) { _, suggestedURL in
+            guard serverURL.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+                return
+            }
+
+            serverURL = suggestedURL ?? ""
+        }
+        .onChange(of: tailscaleDiscoveryStatus) { _, status in
+            switch status {
+            case .unavailable, .failed:
+                isShowingManualEntry = true
+            case .idle, .searching, .found:
+                break
+            }
         }
     }
 
@@ -165,7 +188,7 @@ struct HomeEmptyStateView<AuthSection: View>: View {
         if isConnecting {
             return "Reconnecting..."
         }
-        return isConnected ? "Disconnect Mac" : "Reconnect to Mac"
+        return isConnected ? "Disconnect Mac" : "Find My Mac Again"
     }
 
     private var primaryButtonBackground: some ShapeStyle {
@@ -190,12 +213,12 @@ struct HomeEmptyStateView<AuthSection: View>: View {
             return "MiniDex is checking Tailscale peers on this iPhone and probing likely Codex hosts."
         }
         if isConnecting {
-            return "The app is trying to re-establish its saved companion link."
+            return "MiniDex found a likely Codex host and is opening a live connection to your Mac."
         }
         if isConnected {
             return "Threads, approvals, and run state stay close at hand while Codex works on your Mac."
         }
-        return "Reconnect with your saved server, paste a new Codex app-server URL, or scan a server QR to restore live threads and git-aware controls."
+        return "MiniDex opens straight into discovery, looks for Codex on your tailnet, and falls back to a manual host or IP only when needed."
     }
 
     private var shouldShowTailscaleDiscoveryCard: Bool {
@@ -240,6 +263,78 @@ struct HomeEmptyStateView<AuthSection: View>: View {
                     onRetryTailscaleDiscovery()
                 }
                 .buttonStyle(.bordered)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(14)
+        .background(CodexBrand.cardSurface, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+    }
+
+    private var manualFallbackCard: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Button {
+                withAnimation(.easeInOut(duration: 0.2)) {
+                    isShowingManualEntry.toggle()
+                }
+            } label: {
+                HStack(spacing: 10) {
+                    Image(systemName: "slider.horizontal.3")
+                        .foregroundStyle(CodexBrand.ink)
+
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Manual fallback")
+                            .font(AppFont.subheadline(weight: .semibold))
+                            .foregroundStyle(CodexBrand.ink)
+
+                        Text("Enter a host or IP if Tailscale discovery is unavailable.")
+                            .font(AppFont.caption())
+                            .foregroundStyle(.secondary)
+                    }
+
+                    Spacer()
+
+                    Image(systemName: isShowingManualEntry ? "chevron.up" : "chevron.down")
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundStyle(.secondary)
+                }
+            }
+            .buttonStyle(.plain)
+
+            if isShowingManualEntry {
+                VStack(alignment: .leading, spacing: 10) {
+                    TextField("ws://your-mac:4200", text: $serverURL)
+                        .font(AppFont.mono(.callout))
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled()
+                        .keyboardType(.URL)
+                        .padding(.horizontal, 14)
+                        .padding(.vertical, 14)
+                        .background(CodexBrand.cardSurfaceStrong, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+
+                    Button {
+                        onConnect(serverURL.trimmingCharacters(in: .whitespacesAndNewlines))
+                    } label: {
+                        Label("Connect with Host or IP", systemImage: "bolt.horizontal.circle")
+                            .font(AppFont.subheadline(weight: .semibold))
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 14)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(CodexBrand.ink)
+                    .disabled(serverURL.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || isConnecting)
+
+                    Button {
+                        onScanQRCode()
+                    } label: {
+                        Label("Scan Server QR", systemImage: "qrcode.viewfinder")
+                            .font(AppFont.subheadline(weight: .semibold))
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 12)
+                    }
+                    .buttonStyle(.bordered)
+                    .disabled(isConnecting)
+                }
+                .transition(.move(edge: .top).combined(with: .opacity))
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)

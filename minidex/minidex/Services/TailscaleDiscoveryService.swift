@@ -33,16 +33,20 @@ enum TailscaleDiscoveryStatus: Equatable {
 }
 
 enum TailscaleDiscoveryError: LocalizedError {
-    case localAPIUnavailable
-    case invalidStatusResponse
+    case localAPIUnavailable(String? = nil)
+    case invalidStatusResponse(String? = nil)
     case noReachableCodexServer
 
     var errorDescription: String? {
         switch self {
-        case .localAPIUnavailable:
-            return "Tailscale is not available on this iPhone right now. Connect the phone to Tailscale or enter a host manually."
-        case .invalidStatusResponse:
-            return "MiniDex could not read peer details from the local Tailscale client."
+        case .localAPIUnavailable(let detail):
+            let baseMessage = "MiniDex could not reach Tailscale on this iPhone. Open the Tailscale app, confirm it is connected, then come back and retry. You can still enter a host manually."
+            guard let detail, !detail.isEmpty else { return baseMessage }
+            return "\(baseMessage) (\(detail))"
+        case .invalidStatusResponse(let detail):
+            let baseMessage = "MiniDex could not read peer details from the local Tailscale client."
+            guard let detail, !detail.isEmpty else { return baseMessage }
+            return "\(baseMessage) (\(detail))"
         case .noReachableCodexServer:
             return "No Mac on your tailnet answered like Codex."
         }
@@ -94,7 +98,10 @@ struct TailscaleDiscoveryResult: Sendable {
 }
 
 final class TailscaleDiscoveryService {
-    private static let localAPIStatusURL = URL(string: "http://100.100.100.100/localapi/v0/status")!
+    private static let localAPIStatusURLs: [URL] = [
+        URL(string: "http://100.100.100.100/localapi/v0/status")!,
+        URL(string: "http://[fd7a:115c:a1e0::53]/localapi/v0/status")!
+    ]
     private static let maxProbedCandidates = 12
 
     private let session: URLSession
@@ -181,56 +188,107 @@ private extension TailscaleDiscoveryService {
     }
 
     func fetchPeers() async throws -> [Peer] {
-        var request = URLRequest(url: Self.localAPIStatusURL)
-        request.httpMethod = "GET"
-        request.timeoutInterval = 3
-        request.cachePolicy = .reloadIgnoringLocalCacheData
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        var lastTransportFailure: String?
+        var lastParsingFailure: String?
 
-        do {
-            let (data, response) = try await session.data(for: request)
-            guard let httpResponse = response as? HTTPURLResponse else {
-                throw TailscaleDiscoveryError.invalidStatusResponse
+        for url in Self.localAPIStatusURLs {
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.timeoutInterval = 3
+            request.cachePolicy = .reloadIgnoringLocalCacheData
+            request.setValue("application/json", forHTTPHeaderField: "Accept")
+
+            do {
+                let (data, response) = try await session.data(for: request)
+                guard let httpResponse = response as? HTTPURLResponse else {
+                    lastParsingFailure = "No HTTP response from \(url.host(percentEncoded: false) ?? url.absoluteString)"
+                    continue
+                }
+
+                guard (200..<300).contains(httpResponse.statusCode) else {
+                    lastTransportFailure = "HTTP \(httpResponse.statusCode) from \(url.host(percentEncoded: false) ?? url.absoluteString)"
+                    continue
+                }
+
+                let peers = try parsePeers(from: data).filter { $0.isReachable && $0.isLikelyMac }
+                guard !peers.isEmpty else {
+                    throw TailscaleDiscoveryError.noReachableCodexServer
+                }
+
+                return peers
+            } catch let error as TailscaleDiscoveryError {
+                switch error {
+                case .noReachableCodexServer:
+                    throw error
+                case .invalidStatusResponse(let detail):
+                    lastParsingFailure = detail ?? "Unexpected LocalAPI payload from \(url.host(percentEncoded: false) ?? url.absoluteString)"
+                case .localAPIUnavailable(let detail):
+                    lastTransportFailure = detail ?? "Could not reach \(url.host(percentEncoded: false) ?? url.absoluteString)"
+                }
+            } catch {
+                if let detail = localAPITransportDetail(for: error, url: url) {
+                    lastTransportFailure = detail
+                    continue
+                }
+
+                lastParsingFailure = "Unexpected LocalAPI error from \(url.host(percentEncoded: false) ?? url.absoluteString): \(error.localizedDescription)"
             }
-
-            guard (200..<300).contains(httpResponse.statusCode) else {
-                throw TailscaleDiscoveryError.localAPIUnavailable
-            }
-
-            let peers = try parsePeers(from: data).filter { $0.isReachable && $0.isLikelyMac }
-            guard !peers.isEmpty else {
-                throw TailscaleDiscoveryError.noReachableCodexServer
-            }
-
-            return peers
-        } catch let error as TailscaleDiscoveryError {
-            throw error
-        } catch {
-            if let urlError = error as? URLError,
-               urlError.code == .cannotConnectToHost
-                || urlError.code == .notConnectedToInternet
-                || urlError.code == .networkConnectionLost
-                || urlError.code == .timedOut
-                || urlError.code == .appTransportSecurityRequiresSecureConnection
-                || urlError.code == .secureConnectionFailed {
-                throw TailscaleDiscoveryError.localAPIUnavailable
-            }
-
-            throw TailscaleDiscoveryError.invalidStatusResponse
         }
+
+        if let lastParsingFailure {
+            throw TailscaleDiscoveryError.invalidStatusResponse(lastParsingFailure)
+        }
+
+        if let lastTransportFailure {
+            throw TailscaleDiscoveryError.localAPIUnavailable(lastTransportFailure)
+        }
+
+        throw TailscaleDiscoveryError.localAPIUnavailable("No LocalAPI response from Quad100")
     }
 
     func parsePeers(from data: Data) throws -> [Peer] {
         guard let rootObject = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
-            throw TailscaleDiscoveryError.invalidStatusResponse
+            throw TailscaleDiscoveryError.invalidStatusResponse("Status payload was not a JSON object")
         }
 
         guard let rawPeers = rootObject["Peer"] as? [String: Any]
                 ?? rootObject["peer"] as? [String: Any] else {
-            throw TailscaleDiscoveryError.invalidStatusResponse
+            let keys = rootObject.keys.sorted()
+            let keySummary = keys.isEmpty ? "no top-level keys" : "top-level keys: \(keys.joined(separator: ", "))"
+            throw TailscaleDiscoveryError.invalidStatusResponse("Status payload did not include Peer data (\(keySummary))")
         }
 
         return rawPeers.values.compactMap(parsePeer(from:))
+    }
+
+    func localAPITransportDetail(for error: Error, url: URL) -> String? {
+        guard let urlError = error as? URLError else {
+            return nil
+        }
+
+        let host = url.host(percentEncoded: false) ?? url.absoluteString
+        let reason: String
+
+        switch urlError.code {
+        case .cannotConnectToHost:
+            reason = "cannot connect to \(host)"
+        case .notConnectedToInternet:
+            reason = "device reported no network while reaching \(host)"
+        case .networkConnectionLost:
+            reason = "network connection was lost while reaching \(host)"
+        case .timedOut:
+            reason = "timed out reaching \(host)"
+        case .appTransportSecurityRequiresSecureConnection:
+            reason = "ATS blocked the LocalAPI request to \(host)"
+        case .secureConnectionFailed:
+            reason = "secure connection failed while reaching \(host)"
+        case .cannotFindHost:
+            reason = "could not resolve \(host)"
+        default:
+            reason = "\(urlError.code.rawValue) while reaching \(host)"
+        }
+
+        return reason
     }
 
     func parsePeer(from rawValue: Any) -> Peer? {
