@@ -1,0 +1,248 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/SettingsView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Settings",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 30
+        }
+      },
+      {
+        "comment": "",
+        "key": "Model",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 38
+        }
+      },
+      {
+        "comment": "",
+        "key": "Model",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 40
+        }
+      },
+      {
+        "comment": "",
+        "key": "Auto",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 41
+        }
+      },
+      {
+        "comment": "",
+        "key": "Reasoning",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 53
+        }
+      },
+      {
+        "comment": "",
+        "key": "Reasoning",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 55
+        }
+      },
+      {
+        "comment": "",
+        "key": "Auto",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 56
+        }
+      },
+      {
+        "comment": "",
+        "key": "Access",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 68
+        }
+      },
+      {
+        "comment": "",
+        "key": "Access",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 70
+        }
+      },
+      {
+        "comment": "",
+        "key": "Status: connected",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 86
+        }
+      },
+      {
+        "comment": "",
+        "key": "Status: disconnected",
+        "location": {
+          "startingColumn": 60,
+          "startingLine": 86
+        }
+      },
+      {
+        "comment": "",
+        "key": "Connecting to your Mac...",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 93
+        }
+      },
+      {
+        "comment": "",
+        "key": "Use JetBrains Mono",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 235
+        }
+      },
+      {
+        "comment": "",
+        "key": "JetBrains Mono is the default font.",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 239
+        }
+      },
+      {
+        "comment": "",
+        "key": "Using the system font.",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 240
+        }
+      },
+      {
+        "comment": "",
+        "key": "Liquid Glass",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 247
+        }
+      },
+      {
+        "comment": "",
+        "key": "Liquid Glass effects are enabled.",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 251
+        }
+      },
+      {
+        "comment": "",
+        "key": "Using solid material fallback.",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 252
+        }
+      },
+      {
+        "comment": "",
+        "key": "Used for local alerts when a run finishes while the app is in background.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 275
+        }
+      },
+      {
+        "comment": "",
+        "key": "Status",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 269
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 339
+        }
+      },
+      {
+        "comment": "",
+        "key": "Archived Chats",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 335
+        }
+      },
+      {
+        "comment": "",
+        "key": "MiniDex asks the local Tailscale client on this iPhone for peers, then probes likely Macs for Codex automatically. If both devices are connected to Tailscale, there is usually nothing to configure.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 361
+        }
+      },
+      {
+        "comment": "",
+        "key": "Saved. MiniDex will use your custom suffix and port while it probes Tailscale peers.",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 390
+        }
+      },
+      {
+        "comment": "",
+        "key": "Using defaults. MiniDex will try Tailscale discovery on launch, then fall back to manual host entry if nothing answers.",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 391
+        }
+      },
+      {
+        "comment": "",
+        "key": "MagicDNS suffix (optional)",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 366
+        }
+      },
+      {
+        "comment": "",
+        "key": "example.ts.net",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 369
+        }
+      },
+      {
+        "comment": "",
+        "key": "Preferred Codex port",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 376
+        }
+      },
+      {
+        "comment": "",
+        "key": "4200",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 379
+        }
+      },
+      {
+        "comment": "",
+        "key": "MiniDex is a mobile companion for Codex on your Mac. Pair once, keep your session history on your hardware, and drive approvals or thread checks without outsourcing the experience to third-party branding.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 450
+        }
+      }
+    ]
+  },
+  "version": 1
+}

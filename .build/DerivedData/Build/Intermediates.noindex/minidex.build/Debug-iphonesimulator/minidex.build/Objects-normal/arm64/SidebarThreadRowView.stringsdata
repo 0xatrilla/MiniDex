@@ -1,0 +1,112 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Sidebar/SidebarThreadRowView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Rename Conversation",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 108
+        }
+      },
+      {
+        "comment": "",
+        "key": "Archived",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 44
+        }
+      },
+      {
+        "comment": "",
+        "key": "Rename",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 83
+        }
+      },
+      {
+        "comment": "",
+        "key": "Unarchive",
+        "location": {
+          "startingColumn": 62,
+          "startingLine": 93
+        }
+      },
+      {
+        "comment": "",
+        "key": "Archive",
+        "location": {
+          "startingColumn": 76,
+          "startingLine": 93
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 104
+        }
+      },
+      {
+        "comment": "",
+        "key": "Name",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 109
+        }
+      },
+      {
+        "comment": "",
+        "key": "Rename",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 110
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 116
+        }
+      },
+      {
+        "comment": "",
+        "key": "Conversation diff total",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 134
+        }
+      },
+      {
+        "comment": "",
+        "key": "+%lld -%lld",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 135
+        }
+      },
+      {
+        "comment": "",
+        "key": "+%lld",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 126
+        }
+      },
+      {
+        "comment": "",
+        "key": "-%lld",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 128
+        }
+      }
+    ]
+  },
+  "version": 1
+}

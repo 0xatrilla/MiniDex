@@ -1,0 +1,40 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/TurnComposerView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Ask for follow-up changes",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 171
+        }
+      },
+      {
+        "comment": "",
+        "key": "Local",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 313
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cloud",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 322
+        }
+      },
+      {
+        "comment": "",
+        "key": "Local",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 329
+        }
+      }
+    ]
+  },
+  "version": 1
+}

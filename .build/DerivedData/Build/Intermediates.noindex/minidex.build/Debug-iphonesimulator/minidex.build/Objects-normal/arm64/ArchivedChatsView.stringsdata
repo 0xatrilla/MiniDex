@@ -1,0 +1,80 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Sidebar/ArchivedChatsView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Archived Chats",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 44
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete \"%@\"?",
+        "location": {
+          "startingColumn": 13,
+          "startingLine": 47
+        }
+      },
+      {
+        "comment": "",
+        "key": "No archived chats",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 30
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 54
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 60
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 87
+        }
+      },
+      {
+        "comment": "",
+        "key": "Unarchive",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 95
+        }
+      },
+      {
+        "comment": "",
+        "key": "Unarchive",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 104
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 110
+        }
+      }
+    ]
+  },
+  "version": 1
+}

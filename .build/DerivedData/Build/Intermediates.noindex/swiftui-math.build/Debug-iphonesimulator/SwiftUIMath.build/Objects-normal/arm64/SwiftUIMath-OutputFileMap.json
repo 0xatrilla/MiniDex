@@ -1,0 +1,449 @@
+{
+  "" : {
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/SwiftUIMath-primary.dia",
+    "emit-module-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/SwiftUIMath-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/SwiftUIMath-primary-emit-module.dia",
+    "pch" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/SwiftUIMath-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/SwiftUIMath-primary.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/DerivedSources/resource_bundle_accessor.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/resource_bundle_accessor.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/resource_bundle_accessor.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/resource_bundle_accessor.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/resource_bundle_accessor.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/resource_bundle_accessor.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/resource_bundle_accessor.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/resource_bundle_accessor.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/resource_bundle_accessor~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Font.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Font.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Font.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Font.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Font.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Font.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Font.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Font.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Font~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Display/CGContext+DisplayNode.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/CGContext+DisplayNode.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/CGContext+DisplayNode.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/CGContext+DisplayNode.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/CGContext+DisplayNode.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/CGContext+DisplayNode.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/CGContext+DisplayNode.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/CGContext+DisplayNode.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/CGContext+DisplayNode~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Display/DisplayAccent.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayAccent.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayAccent.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayAccent.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayAccent.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayAccent.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayAccent.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayAccent.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayAccent~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Display/DisplayFraction.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayFraction.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayFraction.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayFraction.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayFraction.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayFraction.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayFraction.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayFraction.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayFraction~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Display/DisplayGlyph.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayGlyph.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayGlyph.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayGlyph.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayGlyph.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayGlyph.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayGlyph.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayGlyph.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayGlyph~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Display/DisplayGlyphRun.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayGlyphRun.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayGlyphRun.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayGlyphRun.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayGlyphRun.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayGlyphRun.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayGlyphRun.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayGlyphRun.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayGlyphRun~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Display/DisplayLargeOperator.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayLargeOperator.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayLargeOperator.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayLargeOperator.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayLargeOperator.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayLargeOperator.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayLargeOperator.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayLargeOperator.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayLargeOperator~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Display/DisplayLine.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayLine.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayLine.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayLine.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayLine.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayLine.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayLine.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayLine.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayLine~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Display/DisplayList.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayList.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayList.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayList.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayList.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayList.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayList.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayList.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayList~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Display/DisplayNode.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayNode.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayNode.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayNode.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayNode.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayNode.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayNode.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayNode.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayNode~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Display/DisplayProvider.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayProvider.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayProvider.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayProvider.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayProvider.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayProvider.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayProvider.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayProvider.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayProvider~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Display/DisplayRadical.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayRadical.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayRadical.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayRadical.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayRadical.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayRadical.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayRadical.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayRadical.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayRadical~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Display/DisplayShiftedNode.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayShiftedNode.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayShiftedNode.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayShiftedNode.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayShiftedNode.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayShiftedNode.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayShiftedNode.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayShiftedNode.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayShiftedNode~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Display/DisplayTextRun.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayTextRun.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayTextRun.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayTextRun.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayTextRun.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayTextRun.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayTextRun.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayTextRun.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/DisplayTextRun~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Display/GraphicsContext+DisplayNode.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/GraphicsContext+DisplayNode.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/GraphicsContext+DisplayNode.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/GraphicsContext+DisplayNode.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/GraphicsContext+DisplayNode.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/GraphicsContext+DisplayNode.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/GraphicsContext+DisplayNode.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/GraphicsContext+DisplayNode.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/GraphicsContext+DisplayNode~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Display/Typesetter.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Typesetter.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Typesetter.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Typesetter.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Typesetter.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Typesetter.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Typesetter.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Typesetter.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Typesetter~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Font/FontMetrics.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontMetrics.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontMetrics.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontMetrics.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontMetrics.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontMetrics.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontMetrics.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontMetrics.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontMetrics~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Font/FontRegistry.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontRegistry.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontRegistry.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontRegistry.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontRegistry.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontRegistry.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontRegistry.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontRegistry.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontRegistry~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Font/FontTable.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontTable.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontTable.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontTable.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontTable.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontTable.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontTable.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontTable.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/FontTable~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Font/PlatformFont.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/PlatformFont.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/PlatformFont.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/PlatformFont.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/PlatformFont.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/PlatformFont.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/PlatformFont.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/PlatformFont.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/PlatformFont~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Helpers/CGColor+HexString.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/CGColor+HexString.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/CGColor+HexString.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/CGColor+HexString.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/CGColor+HexString.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/CGColor+HexString.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/CGColor+HexString.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/CGColor+HexString.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/CGColor+HexString~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Helpers/KeyBox.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/KeyBox.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/KeyBox.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/KeyBox.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/KeyBox.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/KeyBox.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/KeyBox.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/KeyBox.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/KeyBox~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Helpers/ReadWriteLockIsolated.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/ReadWriteLockIsolated.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/ReadWriteLockIsolated.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/ReadWriteLockIsolated.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/ReadWriteLockIsolated.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/ReadWriteLockIsolated.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/ReadWriteLockIsolated.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/ReadWriteLockIsolated.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/ReadWriteLockIsolated~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Helpers/Unicode.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Unicode.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Unicode.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Unicode.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Unicode.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Unicode.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Unicode.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Unicode.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Unicode~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Syntax/AtomFactory.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/AtomFactory.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/AtomFactory.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/AtomFactory.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/AtomFactory.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/AtomFactory.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/AtomFactory.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/AtomFactory.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/AtomFactory~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Syntax/AtomList.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/AtomList.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/AtomList.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/AtomList.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/AtomList.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/AtomList.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/AtomList.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/AtomList.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/AtomList~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Syntax/Atoms/Accent.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Accent.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Accent.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Accent.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Accent.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Accent.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Accent.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Accent.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Accent~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Syntax/Atoms/Color.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Color.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Color.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Color.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Color.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Color.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Color.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Color.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Color~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Syntax/Atoms/ColorBox.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/ColorBox.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/ColorBox.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/ColorBox.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/ColorBox.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/ColorBox.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/ColorBox.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/ColorBox.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/ColorBox~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Syntax/Atoms/Fraction.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Fraction.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Fraction.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Fraction.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Fraction.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Fraction.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Fraction.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Fraction.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Fraction~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Syntax/Atoms/Inner.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Inner.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Inner.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Inner.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Inner.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Inner.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Inner.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Inner.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Inner~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Syntax/Atoms/LargeOperator.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/LargeOperator.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/LargeOperator.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/LargeOperator.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/LargeOperator.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/LargeOperator.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/LargeOperator.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/LargeOperator.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/LargeOperator~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Syntax/Atoms/Overline.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Overline.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Overline.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Overline.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Overline.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Overline.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Overline.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Overline.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Overline~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Syntax/Atoms/Radical.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Radical.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Radical.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Radical.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Radical.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Radical.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Radical.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Radical.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Radical~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Syntax/Atoms/Space.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Space.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Space.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Space.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Space.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Space.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Space.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Space.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Space~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Syntax/Atoms/Style.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Style.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Style.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Style.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Style.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Style.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Style.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Style.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Style~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Syntax/Atoms/Table.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Table.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Table.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Table.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Table.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Table.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Table.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Table.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Table~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Syntax/Atoms/TextColor.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/TextColor.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/TextColor.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/TextColor.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/TextColor.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/TextColor.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/TextColor.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/TextColor.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/TextColor~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Syntax/Atoms/Underline.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Underline.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Underline.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Underline.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Underline.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Underline.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Underline.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Underline.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Underline~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Internal/Syntax/Parser.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Parser.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Parser.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Parser.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Parser.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Parser.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Parser.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Parser.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Parser~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/Math.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Math.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Math.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Math.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Math.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Math.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Math.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Math.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/Math~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/RenderingMode.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/RenderingMode.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/RenderingMode.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/RenderingMode.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/RenderingMode.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/RenderingMode.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/RenderingMode.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/RenderingMode.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/RenderingMode~partial.swiftmodule"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/swiftui-math/Sources/SwiftUIMath/TypesettingStyle.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/TypesettingStyle.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/TypesettingStyle.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/TypesettingStyle.dia",
+    "index-unit-output-path" : "/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/TypesettingStyle.o",
+    "llvm-bc" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/TypesettingStyle.bc",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/TypesettingStyle.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/TypesettingStyle.swiftdeps",
+    "swiftmodule" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/swiftui-math.build/Debug-iphonesimulator/SwiftUIMath.build/Objects-normal/arm64/TypesettingStyle~partial.swiftmodule"
+  }
+}

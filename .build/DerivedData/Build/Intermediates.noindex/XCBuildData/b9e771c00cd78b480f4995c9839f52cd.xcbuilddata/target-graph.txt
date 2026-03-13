@@ -1,0 +1,22 @@
+Target dependency graph (9 targets)
+Target 'minidex' in project 'minidex'
+➜ Explicit dependency on target 'Textual' in project 'textual'
+Target 'Textual' in project 'textual'
+➜ Explicit dependency on target 'Textual' in project 'textual'
+➜ Explicit dependency on target 'textual_Textual' in project 'textual'
+➜ Explicit dependency on target 'ConcurrencyExtras' in project 'swift-concurrency-extras'
+➜ Explicit dependency on target 'SwiftUIMath' in project 'swiftui-math'
+Target 'Textual' in project 'textual'
+➜ Explicit dependency on target 'textual_Textual' in project 'textual'
+➜ Explicit dependency on target 'ConcurrencyExtras' in project 'swift-concurrency-extras'
+➜ Explicit dependency on target 'SwiftUIMath' in project 'swiftui-math'
+Target 'SwiftUIMath' in project 'swiftui-math'
+➜ Explicit dependency on target 'SwiftUIMath' in project 'swiftui-math'
+➜ Explicit dependency on target 'swiftui-math_SwiftUIMath' in project 'swiftui-math'
+Target 'SwiftUIMath' in project 'swiftui-math'
+➜ Explicit dependency on target 'swiftui-math_SwiftUIMath' in project 'swiftui-math'
+Target 'swiftui-math_SwiftUIMath' in project 'swiftui-math' (no dependencies)
+Target 'ConcurrencyExtras' in project 'swift-concurrency-extras'
+➜ Explicit dependency on target 'ConcurrencyExtras' in project 'swift-concurrency-extras'
+Target 'ConcurrencyExtras' in project 'swift-concurrency-extras' (no dependencies)
+Target 'textual_Textual' in project 'textual' (no dependencies)

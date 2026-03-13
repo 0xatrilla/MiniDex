@@ -1,0 +1,114 @@
+{
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/textual/Sources/Textual/StructuredText/Style/Default/DefaultTableStyle.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DefaultTableStyle.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DefaultTableStyle.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DefaultTableStyle.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DefaultTableStyle.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DefaultTableStyle.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/textual/Sources/Textual/StructuredText/Style/Default/DividerThematicBreakStyle.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DividerThematicBreakStyle.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DividerThematicBreakStyle.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DividerThematicBreakStyle.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DividerThematicBreakStyle.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DividerThematicBreakStyle.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/textual/Sources/Textual/StructuredText/Style/Default/DynamicColor+Default.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DynamicColor+Default.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DynamicColor+Default.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DynamicColor+Default.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DynamicColor+Default.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DynamicColor+Default.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/textual/Sources/Textual/StructuredText/Style/Default/OverflowTableStyle.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/OverflowTableStyle.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/OverflowTableStyle.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/OverflowTableStyle.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/OverflowTableStyle.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/OverflowTableStyle.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/textual/Sources/Textual/StructuredText/Style/GitHub/DynamicColor+GitHub.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DynamicColor+GitHub.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DynamicColor+GitHub.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DynamicColor+GitHub.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DynamicColor+GitHub.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/DynamicColor+GitHub.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/textual/Sources/Textual/StructuredText/Style/GitHub/GitHubBlockQuoteStyle.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubBlockQuoteStyle.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubBlockQuoteStyle.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubBlockQuoteStyle.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubBlockQuoteStyle.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubBlockQuoteStyle.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/textual/Sources/Textual/StructuredText/Style/GitHub/GitHubCodeBlockStyle.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubCodeBlockStyle.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubCodeBlockStyle.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubCodeBlockStyle.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubCodeBlockStyle.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubCodeBlockStyle.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/textual/Sources/Textual/StructuredText/Style/GitHub/GitHubHeadingStyle.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubHeadingStyle.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubHeadingStyle.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubHeadingStyle.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubHeadingStyle.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubHeadingStyle.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/textual/Sources/Textual/StructuredText/Style/GitHub/GitHubParagraphStyle.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubParagraphStyle.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubParagraphStyle.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubParagraphStyle.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubParagraphStyle.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubParagraphStyle.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/textual/Sources/Textual/StructuredText/Style/GitHub/GitHubStyle.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubStyle.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubStyle.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubStyle.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubStyle.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubStyle.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/textual/Sources/Textual/StructuredText/Style/GitHub/GitHubTableCellStyle.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubTableCellStyle.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubTableCellStyle.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubTableCellStyle.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubTableCellStyle.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubTableCellStyle.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/textual/Sources/Textual/StructuredText/Style/GitHub/GitHubTableStyle.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubTableStyle.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubTableStyle.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubTableStyle.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubTableStyle.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubTableStyle.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/textual/Sources/Textual/StructuredText/Style/GitHub/GitHubThematicBreak.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubThematicBreak.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubThematicBreak.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubThematicBreak.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubThematicBreak.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/GitHubThematicBreak.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/textual/Sources/Textual/StructuredText/Style/HeadingStyle.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/HeadingStyle.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/HeadingStyle.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/HeadingStyle.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/HeadingStyle.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/HeadingStyle.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/textual/Sources/Textual/StructuredText/Style/ListItemStyle.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/ListItemStyle.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/ListItemStyle.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/ListItemStyle.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/ListItemStyle.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/ListItemStyle.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/SourcePackages/checkouts/textual/Sources/Textual/StructuredText/Style/OrderedListMarker.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/OrderedListMarker.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/OrderedListMarker.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/OrderedListMarker.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/OrderedListMarker.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/textual.build/Debug-iphonesimulator/Textual.build/Objects-normal/arm64/OrderedListMarker.swiftdeps"
+  }
+}

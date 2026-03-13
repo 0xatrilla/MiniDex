@@ -1,0 +1,48 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/SidebarView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Delete \"%@\"?",
+        "location": {
+          "startingColumn": 13,
+          "startingLine": 110
+        }
+      },
+      {
+        "comment": "",
+        "key": "Action failed",
+        "location": {
+          "startingColumn": 13,
+          "startingLine": 131
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 117
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 126
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 137
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,16 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/QueuedDraftsPanel.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Steer",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 37
+        }
+      }
+    ]
+  },
+  "version": 1
+}

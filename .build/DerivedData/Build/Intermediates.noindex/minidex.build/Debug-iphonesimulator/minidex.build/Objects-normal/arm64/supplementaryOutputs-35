@@ -1,0 +1,58 @@
+{
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/TurnPlanModeComponents.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnPlanModeComponents.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnPlanModeComponents.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnPlanModeComponents.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnPlanModeComponents.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnPlanModeComponents.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/TurnScrollStateTracker.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnScrollStateTracker.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnScrollStateTracker.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnScrollStateTracker.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnScrollStateTracker.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnScrollStateTracker.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/TurnSessionDiffSummary.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnSessionDiffSummary.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnSessionDiffSummary.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnSessionDiffSummary.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnSessionDiffSummary.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnSessionDiffSummary.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/TurnTimelineReducer.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnTimelineReducer.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnTimelineReducer.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnTimelineReducer.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnTimelineReducer.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnTimelineReducer.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/TurnTimelineView.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnTimelineView.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnTimelineView.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnTimelineView.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnTimelineView.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnTimelineView.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/TurnToolbarContent.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnToolbarContent.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnToolbarContent.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnToolbarContent.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnToolbarContent.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnToolbarContent.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/TurnView.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnView.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnView.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnView.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnView.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnView.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/TurnViewAlertModifier.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnViewAlertModifier.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnViewAlertModifier.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnViewAlertModifier.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnViewAlertModifier.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/TurnViewAlertModifier.swiftdeps"
+  }
+}

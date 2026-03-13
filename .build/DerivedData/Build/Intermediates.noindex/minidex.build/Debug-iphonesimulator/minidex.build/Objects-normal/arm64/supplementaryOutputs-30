@@ -1,0 +1,65 @@
+{
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Sidebar/ArchivedChatsView.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/ArchivedChatsView.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/ArchivedChatsView.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/ArchivedChatsView.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/ArchivedChatsView.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/ArchivedChatsView.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Sidebar/SidebarFloatingSettingsButton.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarFloatingSettingsButton.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarFloatingSettingsButton.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarFloatingSettingsButton.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarFloatingSettingsButton.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarFloatingSettingsButton.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Sidebar/SidebarHeaderView.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarHeaderView.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarHeaderView.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarHeaderView.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarHeaderView.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarHeaderView.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Sidebar/SidebarNewChatButton.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarNewChatButton.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarNewChatButton.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarNewChatButton.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarNewChatButton.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarNewChatButton.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Sidebar/SidebarRelativeTimeFormatter.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarRelativeTimeFormatter.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarRelativeTimeFormatter.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarRelativeTimeFormatter.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarRelativeTimeFormatter.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarRelativeTimeFormatter.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Sidebar/SidebarSearchField.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarSearchField.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarSearchField.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarSearchField.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarSearchField.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarSearchField.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Sidebar/SidebarThreadGrouping.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarThreadGrouping.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarThreadGrouping.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarThreadGrouping.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarThreadGrouping.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarThreadGrouping.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Sidebar/SidebarThreadListView.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarThreadListView.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarThreadListView.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarThreadListView.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarThreadListView.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarThreadListView.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Sidebar/SidebarThreadRowView.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarThreadRowView.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarThreadRowView.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarThreadRowView.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarThreadRowView.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/SidebarThreadRowView.swiftdeps"
+  }
+}

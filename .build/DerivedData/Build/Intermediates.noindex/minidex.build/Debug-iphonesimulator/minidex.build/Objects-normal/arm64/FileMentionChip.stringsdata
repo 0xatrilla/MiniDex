@@ -1,0 +1,24 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/FileMentionChip.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Remove file mention",
+        "location": {
+          "startingColumn": 37,
+          "startingLine": 36
+        }
+      },
+      {
+        "comment": "",
+        "key": "Remove skill mention",
+        "location": {
+          "startingColumn": 37,
+          "startingLine": 70
+        }
+      }
+    ]
+  },
+  "version": 1
+}

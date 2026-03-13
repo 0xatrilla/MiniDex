@@ -1,0 +1,65 @@
+{
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Models/CodexReasoningEffortOption.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CodexReasoningEffortOption.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CodexReasoningEffortOption.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CodexReasoningEffortOption.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CodexReasoningEffortOption.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CodexReasoningEffortOption.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Models/CodexSkillMetadata.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CodexSkillMetadata.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CodexSkillMetadata.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CodexSkillMetadata.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CodexSkillMetadata.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CodexSkillMetadata.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Models/CodexThread.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CodexThread.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CodexThread.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CodexThread.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CodexThread.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CodexThread.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Models/CommandExecutionDetails.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CommandExecutionDetails.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CommandExecutionDetails.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CommandExecutionDetails.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CommandExecutionDetails.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/CommandExecutionDetails.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Models/ContextWindowUsage.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/ContextWindowUsage.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/ContextWindowUsage.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/ContextWindowUsage.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/ContextWindowUsage.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/ContextWindowUsage.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Models/GitActionModels.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/GitActionModels.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/GitActionModels.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/GitActionModels.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/GitActionModels.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/GitActionModels.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Models/JSONValue.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/JSONValue.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/JSONValue.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/JSONValue.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/JSONValue.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/JSONValue.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Models/RPCMessage.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/RPCMessage.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/RPCMessage.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/RPCMessage.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/RPCMessage.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/RPCMessage.swiftdeps"
+  },
+  "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Services/AIChangeSetPersistence.swift" : {
+    "const-values" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/AIChangeSetPersistence.swiftconstvalues",
+    "dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/AIChangeSetPersistence.d",
+    "diagnostics" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/AIChangeSetPersistence.dia",
+    "object" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/AIChangeSetPersistence.o",
+    "swift-dependencies" : "/Users/callummatthews1/Developer/codex-mobile/.build/DerivedData/Build/Intermediates.noindex/minidex.build/Debug-iphonesimulator/minidex.build/Objects-normal/arm64/AIChangeSetPersistence.swiftdeps"
+  }
+}

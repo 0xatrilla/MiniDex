@@ -1,0 +1,72 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/ContextWindowProgressRing.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Context window",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 40
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld percent used",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 41
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 32
+        }
+      },
+      {
+        "comment": "",
+        "key": "Context window:",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 50
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld%% full",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 54
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@ / %@ tokens used",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 57
+        }
+      },
+      {
+        "comment": "",
+        "key": "Compacting…",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 68
+        }
+      },
+      {
+        "comment": "",
+        "key": "Compact context",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 80
+        }
+      }
+    ]
+  },
+  "version": 1
+}

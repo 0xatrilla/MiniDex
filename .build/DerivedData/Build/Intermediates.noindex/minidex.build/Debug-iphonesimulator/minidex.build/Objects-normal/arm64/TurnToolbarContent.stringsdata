@@ -1,0 +1,40 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/TurnToolbarContent.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Repository diff total",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 104
+        }
+      },
+      {
+        "comment": "",
+        "key": "+%lld",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 89
+        }
+      },
+      {
+        "comment": "",
+        "key": "-%lld",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 91
+        }
+      },
+      {
+        "comment": "",
+        "key": "B%lld",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 94
+        }
+      }
+    ]
+  },
+  "version": 1
+}

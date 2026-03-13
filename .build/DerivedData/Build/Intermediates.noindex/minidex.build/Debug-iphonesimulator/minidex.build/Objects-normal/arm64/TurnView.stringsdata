@@ -1,0 +1,16 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/TurnView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "What should Codex tackle next?",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 536
+        }
+      }
+    ]
+  },
+  "version": 1
+}

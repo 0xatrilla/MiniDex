@@ -1,0 +1,152 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Connect to Another Server",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 141
+        }
+      },
+      {
+        "comment": "",
+        "key": "Scan Server QR",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 149
+        }
+      },
+      {
+        "comment": "",
+        "key": "Menu",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 265
+        }
+      },
+      {
+        "comment": "",
+        "key": "MiniDex connects straight to Codex app-server, so there is no extra Mac companion package to install.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 535
+        }
+      },
+      {
+        "comment": "",
+        "key": "Connect to Codex on your Mac",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 415
+        }
+      },
+      {
+        "comment": "",
+        "key": "Run Codex app-server on your Mac. If this iPhone is already on Tailscale, MiniDex will try to find it automatically. Otherwise, paste the WebSocket URL here or scan a QR code.",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 419
+        }
+      },
+      {
+        "comment": "",
+        "key": "Low-friction setup",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 432
+        }
+      },
+      {
+        "comment": "",
+        "key": "Run this on your Mac:",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 439
+        }
+      },
+      {
+        "comment": "",
+        "key": "Then connect with a reachable URL such as `ws://192.168.1.25:4200` on local Wi-Fi or `ws://100.x.y.z:4200` over Tailscale.",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 445
+        }
+      },
+      {
+        "comment": "",
+        "key": "Server URL",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 450
+        }
+      },
+      {
+        "comment": "",
+        "key": "ws://your-mac:4200",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 454
+        }
+      },
+      {
+        "comment": "",
+        "key": "Connecting...",
+        "location": {
+          "startingColumn": 53,
+          "startingLine": 482
+        }
+      },
+      {
+        "comment": "",
+        "key": "Connect to Server",
+        "location": {
+          "startingColumn": 71,
+          "startingLine": 482
+        }
+      },
+      {
+        "comment": "",
+        "key": "Other options",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 509
+        }
+      },
+      {
+        "comment": "",
+        "key": "Back to saved connection",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 527
+        }
+      },
+      {
+        "comment": "",
+        "key": "Scan Server QR",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 517
+        }
+      },
+      {
+        "comment": "",
+        "key": "Retry Tailscale Discovery",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 584
+        }
+      },
+      {
+        "comment": "",
+        "key": "Tailscale Discovery",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 560
+        }
+      }
+    ]
+  },
+  "version": 1
+}

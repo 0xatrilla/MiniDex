@@ -1,0 +1,16 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Sidebar/SidebarFloatingSettingsButton.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Settings",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 25
+        }
+      }
+    ]
+  },
+  "version": 1
+}

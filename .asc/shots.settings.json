@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "app": {
+    "bundle_id": "com.minidex.ios",
+    "project": "minidex/minidex.xcodeproj",
+    "scheme": "minidex",
+    "simulator_udid": "C8DE2F3D-29D7-40EF-A385-077062496DC3"
+  },
+  "paths": {
+    "plan": ".asc/screenshots.json",
+    "raw_dir": "./screenshots/raw",
+    "framed_dir": "./screenshots/framed"
+  },
+  "pipeline": {
+    "frame_enabled": false,
+    "upload_enabled": false
+  },
+  "upload": {
+    "version_localization_id": "",
+    "device_type": "IPHONE_65",
+    "source_dir": "./screenshots/raw"
+  }
+}

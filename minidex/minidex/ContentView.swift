@@ -125,7 +125,7 @@ struct ContentView: View {
             }
         )
         .task {
-            await viewModel.attemptTailscaleDiscoveryIfNeeded(codex: codex, force: false)
+            _ = await viewModel.attemptTailscaleDiscoveryIfNeeded(codex: codex, force: false)
         }
         .fullScreenCover(isPresented: $isShowingPairingScanner) {
             QRScannerView { target in

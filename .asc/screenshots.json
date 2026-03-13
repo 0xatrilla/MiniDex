@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "app": {
+    "bundle_id": "com.minidex.ios",
+    "udid": "C8DE2F3D-29D7-40EF-A385-077062496DC3",
+    "output_dir": "./screenshots/raw"
+  },
+  "steps": [
+    {
+      "action": "launch"
+    },
+    {
+      "action": "wait",
+      "duration_ms": 500
+    },
+    {
+      "action": "tap",
+      "label": "Not Now"
+    },
+    {
+      "action": "wait",
+      "duration_ms": 300
+    },
+    {
+      "action": "screenshot",
+      "name": "01-onboarding"
+    },
+    {
+      "action": "wait",
+      "duration_ms": 1200
+    },
+    {
+      "action": "screenshot",
+      "name": "02-connection-setup"
+    }
+  ]
+}

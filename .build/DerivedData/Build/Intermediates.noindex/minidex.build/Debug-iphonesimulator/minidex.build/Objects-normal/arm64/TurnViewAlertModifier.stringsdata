@@ -1,0 +1,80 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/TurnViewAlertModifier.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Approval request",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 21
+        }
+      },
+      {
+        "comment": "",
+        "key": "Nothing to Commit",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 36
+        }
+      },
+      {
+        "comment": "",
+        "key": "Decline",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 25
+        }
+      },
+      {
+        "comment": "",
+        "key": "Approve",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 29
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 37
+        }
+      },
+      {
+        "comment": "",
+        "key": "There are no changes to commit.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 39
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 48
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 52
+        }
+      },
+      {
+        "comment": "",
+        "key": "Pull & Rebase",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 55
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -53,7 +53,7 @@ struct HomeEmptyStateView<AuthSection: View>: View {
                             .scaleEffect(dotPulse ? 1.4 : 1.0)
                             .opacity(dotPulse ? 0.6 : 1.0)
                             .animation(
-                                isConnecting
+                                (isSearchingTailscale || isConnecting)
                                     ? .easeInOut(duration: 0.8).repeatForever(autoreverses: true)
                                     : .default,
                                 value: dotPulse
@@ -69,7 +69,7 @@ struct HomeEmptyStateView<AuthSection: View>: View {
 
                     HStack(spacing: 12) {
                         StatusTile(title: "Link", value: isConnected ? "Live" : "Standby")
-                        StatusTile(title: "Sync", value: isConnecting ? "Warm" : "Ready")
+                        StatusTile(title: "Sync", value: (isSearchingTailscale || isConnecting) ? "Warm" : "Ready")
                         StatusTile(title: "Mode", value: "Private")
                     }
 
@@ -86,7 +86,7 @@ struct HomeEmptyStateView<AuthSection: View>: View {
 
                     Button(action: onToggleConnection) {
                         HStack(spacing: 10) {
-                            if isConnecting {
+                            if isSearchingTailscale || isConnecting {
                                 ProgressView()
                                     .tint(.white)
                                     .scaleEffect(0.9)
@@ -102,7 +102,7 @@ struct HomeEmptyStateView<AuthSection: View>: View {
                         .background(primaryButtonBackground, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
                     }
                     .buttonStyle(.plain)
-                    .disabled(isConnecting)
+                    .disabled(isSearchingTailscale || isConnecting)
                     .padding(.top, 6)
 
                     authSection()
@@ -122,25 +122,32 @@ struct HomeEmptyStateView<AuthSection: View>: View {
         .navigationTitle("MiniDex")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
-            if isConnecting {
+            if isSearchingTailscale || isConnecting {
                 connectionAttemptStartedAt = Date()
                 dotPulse = true
             }
         }
         .onChange(of: isConnecting) { _, connecting in
-            connectionAttemptStartedAt = connecting ? Date() : nil
-            dotPulse = connecting
+            connectionAttemptStartedAt = (connecting || isSearchingTailscale) ? Date() : nil
+            dotPulse = connecting || isSearchingTailscale
+        }
+        .onChange(of: isSearchingTailscale) { _, searching in
+            connectionAttemptStartedAt = (searching || isConnecting) ? Date() : nil
+            dotPulse = searching || isConnecting
         }
     }
 
     // MARK: - Helpers
 
     private var statusDotColor: Color {
-        if isConnecting { return CodexBrand.accent }
+        if isSearchingTailscale || isConnecting { return CodexBrand.accent }
         return isConnected ? CodexBrand.success : Color(.tertiaryLabel)
     }
 
     private var statusLabel: String {
+        if isSearchingTailscale {
+            return "Finding your Mac"
+        }
         if isConnecting {
             guard let connectionAttemptStartedAt else { return "Connecting" }
             let elapsed = Date().timeIntervalSince(connectionAttemptStartedAt)
@@ -151,6 +158,9 @@ struct HomeEmptyStateView<AuthSection: View>: View {
     }
 
     private var primaryButtonTitle: String {
+        if isSearchingTailscale {
+            return "Looking for your Mac..."
+        }
         if isConnecting {
             return "Reconnecting..."
         }
@@ -175,6 +185,9 @@ struct HomeEmptyStateView<AuthSection: View>: View {
     }
 
     private var statusDescription: String {
+        if isSearchingTailscale {
+            return "MiniDex is checking Tailscale peers on this iPhone and probing likely Codex hosts."
+        }
         if isConnecting {
             return "The app is trying to re-establish its saved companion link."
         }

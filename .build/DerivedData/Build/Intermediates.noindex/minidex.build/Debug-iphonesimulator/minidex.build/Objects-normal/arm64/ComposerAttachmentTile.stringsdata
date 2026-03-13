@@ -1,0 +1,16 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/ComposerAttachmentTile.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Remove image",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 60
+        }
+      }
+    ]
+  },
+  "version": 1
+}

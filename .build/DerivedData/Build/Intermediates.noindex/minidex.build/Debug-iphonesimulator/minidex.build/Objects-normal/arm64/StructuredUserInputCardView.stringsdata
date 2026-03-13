@@ -1,0 +1,24 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/StructuredUserInputCardView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Sending...",
+        "location": {
+          "startingColumn": 37,
+          "startingLine": 157
+        }
+      },
+      {
+        "comment": "",
+        "key": "Send",
+        "location": {
+          "startingColumn": 52,
+          "startingLine": 157
+        }
+      }
+    ]
+  },
+  "version": 1
+}

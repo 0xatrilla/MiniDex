@@ -1,0 +1,24 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Sidebar/SidebarSearchField.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 42
+        }
+      },
+      {
+        "comment": "",
+        "key": "Search conversations",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 20
+        }
+      }
+    ]
+  },
+  "version": 1
+}

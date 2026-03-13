@@ -1,0 +1,56 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Home/HomeEmptyStateView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "MiniDex",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 122
+        }
+      },
+      {
+        "comment": "",
+        "key": "Companion link",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 33
+        }
+      },
+      {
+        "comment": "",
+        "key": "Your Mac is ready.",
+        "location": {
+          "startingColumn": 44,
+          "startingLine": 38
+        }
+      },
+      {
+        "comment": "",
+        "key": "Pair with your Mac and pick up where you left off.",
+        "location": {
+          "startingColumn": 67,
+          "startingLine": 38
+        }
+      },
+      {
+        "comment": "",
+        "key": "Retry Tailscale Discovery",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 223
+        }
+      },
+      {
+        "comment": "",
+        "key": "Tailscale Discovery",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 199
+        }
+      }
+    ]
+  },
+  "version": 1
+}

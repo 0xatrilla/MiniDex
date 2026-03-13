@@ -1,0 +1,40 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/TurnGitActionsToolbar.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Git actions",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 135
+        }
+      },
+      {
+        "comment": "",
+        "key": "Update",
+        "location": {
+          "startingColumn": 21,
+          "startingLine": 94
+        }
+      },
+      {
+        "comment": "",
+        "key": "Write",
+        "location": {
+          "startingColumn": 21,
+          "startingLine": 98
+        }
+      },
+      {
+        "comment": "",
+        "key": "Recovery",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 105
+        }
+      }
+    ]
+  },
+  "version": 1
+}

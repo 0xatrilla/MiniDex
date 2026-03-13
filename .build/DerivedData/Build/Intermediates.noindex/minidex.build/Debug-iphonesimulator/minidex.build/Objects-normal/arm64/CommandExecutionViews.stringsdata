@@ -1,0 +1,24 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/CommandExecutionViews.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Command",
+        "location": {
+          "startingColumn": 19,
+          "startingLine": 109
+        }
+      },
+      {
+        "comment": "",
+        "key": "Output (last %lld lines)",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 167
+        }
+      }
+    ]
+  },
+  "version": 1
+}

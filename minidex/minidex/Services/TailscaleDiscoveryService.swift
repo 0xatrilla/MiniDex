@@ -4,6 +4,7 @@
 // Exports: TailscaleDiscoveryConfiguration, TailscaleDiscoveryStatus, TailscaleDiscoveryService
 
 import Foundation
+import Network
 
 struct TailscaleDiscoveryConfiguration: Sendable {
     let tailnetDNSName: String?
@@ -57,8 +58,6 @@ final class TailscaleDiscoveryService {
     private static let localAPIStatusURL = URL(string: "http://100.100.100.100/localapi/v0/status")!
 
     private let session: URLSession
-    private let decoder = JSONDecoder()
-    private let encoder = JSONEncoder()
 
     init(session: URLSession? = nil) {
         if let session {
@@ -66,11 +65,7 @@ final class TailscaleDiscoveryService {
             return
         }
 
-        let configuration = URLSessionConfiguration.ephemeral
-        configuration.timeoutIntervalForRequest = 3
-        configuration.timeoutIntervalForResource = 6
-        configuration.waitsForConnectivity = false
-        self.session = URLSession(configuration: configuration)
+        self.session = .shared
     }
 
     func discoverCodexServer(configuration: TailscaleDiscoveryConfiguration) async throws -> TailscaleDiscoveryResult {
@@ -127,6 +122,7 @@ private extension TailscaleDiscoveryService {
     func fetchPeers() async throws -> [Peer] {
         var request = URLRequest(url: Self.localAPIStatusURL)
         request.httpMethod = "GET"
+        request.timeoutInterval = 3
         request.setValue("application/json", forHTTPHeaderField: "Accept")
 
         do {
@@ -349,13 +345,8 @@ private extension TailscaleDiscoveryService {
     func firstReachableCodexServerURL(in candidates: [String]) async -> String? {
         await withTaskGroup(of: String?.self, returning: String?.self) { taskGroup in
             for candidate in candidates.prefix(16) {
-                taskGroup.addTask { [session, encoder, decoder] in
-                    await Self.probeCodexServer(
-                        candidate,
-                        session: session,
-                        encoder: encoder,
-                        decoder: decoder
-                    )
+                taskGroup.addTask {
+                    await Self.probeCodexServer(candidate)
                 }
             }
 
@@ -371,77 +362,68 @@ private extension TailscaleDiscoveryService {
     }
 
     static func probeCodexServer(
-        _ candidate: String,
-        session: URLSession,
-        encoder: JSONEncoder,
-        decoder: JSONDecoder
+        _ candidate: String
     ) async -> String? {
-        guard let url = URL(string: candidate) else {
+        guard let url = URL(string: candidate),
+              let host = url.host else {
             return nil
         }
-
-        let requestID = UUID().uuidString
-        let probeRequest = RPCMessage(
-            id: .string(requestID),
-            method: "initialize",
-            params: .object([
-                "clientInfo": .object([
-                    "name": .string("minidex_ios_discovery"),
-                    "title": .string("MiniDex iOS Discovery"),
-                    "version": .string("1.0"),
-                ]),
-            ]),
-            includeJSONRPC: false
-        )
+        let port = UInt16(url.port ?? 80)
 
         do {
-            return try await withTimeout(seconds: 2.5) {
-                let webSocketTask = session.webSocketTask(with: url)
-                webSocketTask.resume()
-                defer {
-                    webSocketTask.cancel(with: .goingAway, reason: nil)
-                }
+            let isReachable = try await probeOpenTCPPort(host: host, port: port)
+            return isReachable ? candidate : nil
+        } catch {
+            return nil
+        }
+    }
 
-                let payload = try encoder.encode(probeRequest)
-                guard let payloadString = String(data: payload, encoding: .utf8) else {
-                    return nil
-                }
+    static func probeOpenTCPPort(host: String, port: UInt16) async throws -> Bool {
+        do {
+            return try await withTimeout(seconds: 1.2) {
+                try await withCheckedThrowingContinuation { continuation in
+                    let endpointHost = NWEndpoint.Host(host)
+                    guard let endpointPort = NWEndpoint.Port(rawValue: port) else {
+                        continuation.resume(returning: false)
+                        return
+                    }
+                    let connection = NWConnection(
+                        host: endpointHost,
+                        port: endpointPort,
+                        using: .tcp
+                    )
 
-                try await webSocketTask.send(.string(payloadString))
+                    let lock = NSLock()
+                    var hasResumed = false
 
-                while true {
-                    let message = try await webSocketTask.receive()
-                    let text: String?
-                    switch message {
-                    case .string(let value):
-                        text = value
-                    case .data(let value):
-                        text = String(data: value, encoding: .utf8)
-                    @unknown default:
-                        text = nil
+                    func finish(_ result: Result<Bool, Error>) {
+                        lock.lock()
+                        defer { lock.unlock() }
+                        guard !hasResumed else { return }
+                        hasResumed = true
+                        connection.stateUpdateHandler = nil
+                        connection.cancel()
+                        continuation.resume(with: result)
                     }
 
-                    guard let text else { continue }
-                    guard let response = try? decoder.decode(RPCMessage.self, from: Data(text.utf8)) else {
-                        continue
+                    connection.stateUpdateHandler = { state in
+                        switch state {
+                        case .ready:
+                            finish(.success(true))
+                        case .failed(let error):
+                            finish(.failure(error))
+                        case .cancelled:
+                            finish(.success(false))
+                        default:
+                            break
+                        }
                     }
 
-                    guard response.id == .string(requestID), response.isResponse else {
-                        continue
-                    }
-
-                    if response.result != nil {
-                        return candidate
-                    }
-
-                    if let error = response.error,
-                       !error.message.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-                        return candidate
-                    }
+                    connection.start(queue: .global(qos: .userInitiated))
                 }
             }
         } catch {
-            return nil
+            return false
         }
     }
 

@@ -1,0 +1,224 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/TurnMessageComponents.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Copied",
+        "location": {
+          "startingColumn": 43,
+          "startingLine": 53
+        }
+      },
+      {
+        "comment": "",
+        "key": "Copy",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 53
+        }
+      },
+      {
+        "comment": "",
+        "key": "+%lld",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 102
+        }
+      },
+      {
+        "comment": "",
+        "key": "-%lld",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 104
+        }
+      },
+      {
+        "comment": "",
+        "key": "Diff",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 141
+        }
+      },
+      {
+        "comment": "",
+        "key": "+%lld",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 142
+        }
+      },
+      {
+        "comment": "",
+        "key": "-%lld",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 144
+        }
+      },
+      {
+        "comment": "",
+        "key": "Commit & Push",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 167
+        }
+      },
+      {
+        "comment": "",
+        "key": "Changes",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 258
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld file%@ changed",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 213
+        }
+      },
+      {
+        "comment": "",
+        "key": "Collapse All",
+        "location": {
+          "startingColumn": 48,
+          "startingLine": 228
+        }
+      },
+      {
+        "comment": "",
+        "key": "Expand All",
+        "location": {
+          "startingColumn": 65,
+          "startingLine": 228
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 263
+        }
+      },
+      {
+        "comment": "",
+        "key": "P%lld",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 329
+        }
+      },
+      {
+        "comment": "",
+        "key": "Copy",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 839
+        }
+      },
+      {
+        "comment": "",
+        "key": "Retry",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 847
+        }
+      },
+      {
+        "comment": "",
+        "key": "Revert Changes",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 1146
+        }
+      },
+      {
+        "comment": "",
+        "key": "Thinking...",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 1025
+        }
+      },
+      {
+        "comment": "",
+        "key": "Undo",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 1135
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 1147
+        }
+      },
+      {
+        "comment": "",
+        "key": "Revert",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 1148
+        }
+      },
+      {
+        "comment": "",
+        "key": "Are you sure you want to discard these changes?",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 1152
+        }
+      },
+      {
+        "comment": "",
+        "key": "+%lld",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 1305
+        }
+      },
+      {
+        "comment": "",
+        "key": "-%lld",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 1310
+        }
+      },
+      {
+        "comment": "",
+        "key": "Approval request",
+        "location": {
+          "startingColumn": 19,
+          "startingLine": 1478
+        }
+      },
+      {
+        "comment": "",
+        "key": "Approve",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 1496
+        }
+      },
+      {
+        "comment": "",
+        "key": "Deny",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 1502
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,4 @@
+module SwiftUIMath {
+header "SwiftUIMath-Swift.h"
+export *
+}

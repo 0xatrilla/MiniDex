@@ -72,8 +72,11 @@ final class ContentViewModel {
             return
         }
 
+        if await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: true) {
+            return
+        }
+
         guard let serverURL = codex.normalizedSavedServerURL else {
-            await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: false)
             return
         }
 
@@ -84,7 +87,7 @@ final class ContentViewModel {
                 performAutoRetry: true
             )
         } catch {
-            await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: true)
+            _ = await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: true)
 
             if !codex.isConnected, codex.lastErrorMessage?.isEmpty ?? true {
                 codex.lastErrorMessage = codex.userFacingConnectFailureMessage(error)
@@ -103,6 +106,10 @@ final class ContentViewModel {
             return
         }
 
+        if await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: false) {
+            return
+        }
+
         guard let serverURL = codex.normalizedSavedServerURL else {
             return
         }
@@ -114,13 +121,7 @@ final class ContentViewModel {
                 performAutoRetry: false
             )
         } catch {
-            // Keep the saved server URL so temporary network outages can recover on the next retry.
-            await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: false)
             return
-        }
-
-        if !codex.isConnected {
-            await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: false)
         }
     }
 
@@ -199,27 +200,27 @@ final class ContentViewModel {
         }
     }
 
-    func attemptTailscaleDiscoveryIfNeeded(codex: CodexService, force: Bool) async {
+    func attemptTailscaleDiscoveryIfNeeded(codex: CodexService, force: Bool) async -> Bool {
         if !force {
             guard !hasAttemptedInitialTailscaleDiscovery else {
-                return
+                return false
             }
             hasAttemptedInitialTailscaleDiscovery = true
         }
 
         guard !codex.isConnected, !codex.isConnecting else {
-            return
+            return false
         }
 
         guard !isRunningAutoReconnect, !isDiscoveringTailscaleServer else {
-            return
+            return false
         }
 
-        await discoverTailscaleServerAndConnect(codex: codex)
+        return await discoverTailscaleServerAndConnect(codex: codex)
     }
 
     func retryTailscaleDiscovery(codex: CodexService) async {
-        await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: true)
+        _ = await attemptTailscaleDiscoveryIfNeeded(codex: codex, force: true)
     }
 }
 
@@ -288,7 +289,7 @@ extension ContentViewModel {
         }
     }
 
-    private func discoverTailscaleServerAndConnect(codex: CodexService) async {
+    private func discoverTailscaleServerAndConnect(codex: CodexService) async -> Bool {
         isDiscoveringTailscaleServer = true
         tailscaleDiscoveryStatus = .searching
         defer { isDiscoveringTailscaleServer = false }
@@ -308,6 +309,7 @@ extension ContentViewModel {
                 serverURL: result.serverURL,
                 performAutoRetry: true
             )
+            return codex.isConnected
         } catch TailscaleDiscoveryError.noReachableCodexServer {
             tailscaleDiscoveryStatus = .unavailable
         } catch {
@@ -316,5 +318,7 @@ extension ContentViewModel {
                 message.isEmpty ? "Tailscale discovery failed." : message
             )
         }
+
+        return false
     }
 }

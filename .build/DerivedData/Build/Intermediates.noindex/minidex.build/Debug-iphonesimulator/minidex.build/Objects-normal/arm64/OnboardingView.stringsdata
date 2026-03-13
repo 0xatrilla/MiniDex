@@ -1,0 +1,64 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Onboarding/OnboardingView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Open the app while your iPhone and Mac are both connected to Tailscale and MiniDex should try to find Codex automatically. If you are off-tailnet, you can still connect with a host or IP.",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 37
+        }
+      },
+      {
+        "comment": "",
+        "key": "MiniDex",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 27
+        }
+      },
+      {
+        "comment": "",
+        "key": "A mobile control room for the Codex session running on your Mac.",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 31
+        }
+      },
+      {
+        "comment": "",
+        "key": "Quick setup",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 57
+        }
+      },
+      {
+        "comment": "",
+        "key": "Starting connection setup automatically...",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 66
+        }
+      },
+      {
+        "comment": "",
+        "key": "Opening Connection Setup...",
+        "location": {
+          "startingColumn": 57,
+          "startingLine": 98
+        }
+      },
+      {
+        "comment": "",
+        "key": "Open Connection Setup",
+        "location": {
+          "startingColumn": 89,
+          "startingLine": 98
+        }
+      }
+    ]
+  },
+  "version": 1
+}

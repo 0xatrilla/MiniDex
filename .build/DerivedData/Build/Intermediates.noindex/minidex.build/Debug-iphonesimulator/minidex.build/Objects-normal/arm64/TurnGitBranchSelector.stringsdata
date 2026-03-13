@@ -1,0 +1,136 @@
+{
+  "source": "/Users/callummatthews1/Developer/codex-mobile/minidex/minidex/Views/Turn/TurnGitBranchSelector.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Current branch",
+        "location": {
+          "startingColumn": 21,
+          "startingLine": 104
+        }
+      },
+      {
+        "comment": "",
+        "key": "PR target",
+        "location": {
+          "startingColumn": 21,
+          "startingLine": 112
+        }
+      },
+      {
+        "comment": "",
+        "key": "Switching...",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 126
+        }
+      },
+      {
+        "comment": "",
+        "key": "Reloading...",
+        "location": {
+          "startingColumn": 58,
+          "startingLine": 128
+        }
+      },
+      {
+        "comment": "",
+        "key": "Reload branch list",
+        "location": {
+          "startingColumn": 75,
+          "startingLine": 128
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@ (default)",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 196
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@ (default)",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 194
+        }
+      },
+      {
+        "comment": "",
+        "key": "Browse all branches (%lld)...",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 222
+        }
+      },
+      {
+        "comment": "",
+        "key": "Search branches",
+        "location": {
+          "startingColumn": 52,
+          "startingLine": 293
+        }
+      },
+      {
+        "comment": "",
+        "key": "No branches found",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 287
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@ (default)",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 265
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@ (default)",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 263
+        }
+      },
+      {
+        "comment": "",
+        "key": "Close",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 298
+        }
+      },
+      {
+        "comment": "",
+        "key": "Switching...",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 307
+        }
+      },
+      {
+        "comment": "",
+        "key": "Refreshing...",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 309
+        }
+      },
+      {
+        "comment": "",
+        "key": "Refresh",
+        "location": {
+          "startingColumn": 64,
+          "startingLine": 309
+        }
+      }
+    ]
+  },
+  "version": 1
+}
