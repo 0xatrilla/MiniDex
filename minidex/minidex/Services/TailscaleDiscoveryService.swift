@@ -184,6 +184,7 @@ private extension TailscaleDiscoveryService {
         var request = URLRequest(url: Self.localAPIStatusURL)
         request.httpMethod = "GET"
         request.timeoutInterval = 3
+        request.cachePolicy = .reloadIgnoringLocalCacheData
         request.setValue("application/json", forHTTPHeaderField: "Accept")
 
         do {
@@ -209,7 +210,9 @@ private extension TailscaleDiscoveryService {
                urlError.code == .cannotConnectToHost
                 || urlError.code == .notConnectedToInternet
                 || urlError.code == .networkConnectionLost
-                || urlError.code == .timedOut {
+                || urlError.code == .timedOut
+                || urlError.code == .appTransportSecurityRequiresSecureConnection
+                || urlError.code == .secureConnectionFailed {
                 throw TailscaleDiscoveryError.localAPIUnavailable
             }
 
